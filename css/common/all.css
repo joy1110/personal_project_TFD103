@@ -7,6 +7,7 @@
   --secondary-color-1: #E0E0E0;
   --secondary-color-2: #C2C9CD;
   --text-color: #333;
+  font-family: "Songti TC", serif;
 }
 body{
   margin: 0 auto;

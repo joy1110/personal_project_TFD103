@@ -30,17 +30,17 @@ main.main div.first_screen{
   /* border: 1px solid red; */
   width: 100%;
   height: calc(100vh - var(--header-height));
-  background-image: url(https://via.placeholder.com/1500x1000);
+  background-image: url(../images/DSC8386.jpg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
 }
 main.main div.first_screen div.first_screen_intro{
   /* border: 1px solid blue; */
-  height: 70%;
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, .4) 0px, rgba(255, 255, 255, 0) 100%);
+  height: 65%;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, .6) 35%, rgba(255, 255, 255, .2) 100%);
   opacity: 0;
-  transition: all .5s;
+  transition: opacity .5s;
   overflow: hidden;
 }
 main.main div.first_screen div.first_screen_intro:hover{
@@ -50,14 +50,14 @@ main.main div.first_screen div.first_screen_intro h1.title1{
   text-align: center;
   font-size: 3.2rem;
   font-weight: bold;
-  opacity: .7;
   margin: 60px 0 30px;
+  color: #333;
 }
 main.main div.first_screen div.first_screen_intro p.intro{
   padding: 0 300px;
   font-size: 2rem;
   line-height: 1.6em;
-  opacity: .7;
+  color: #333;
 }
 
 
@@ -72,12 +72,17 @@ main.main div.main_1{
 main.main div.main_1 h2.title2{
   text-align: center;
   font-size: 2.2rem;
+  margin: 30px 0;
 }
 main.main div.main_1 p.para{
   font-size: 1.6rem;
   line-height: 2em;
-  padding: 0 15%;
+  padding: 0 20%;
   text-indent: 2em;
+  margin-bottom: 25px;
+}
+main.main div.main_1 p.para2{
+  margin-bottom: 35px;
 }
 main.main div.main_1 div.pic_area{
   text-align: center;
