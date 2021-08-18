@@ -1,0 +1,420 @@
+body{
+  background-color: var(--primary-color,#F6F3EE);
+  width: var(--page-width);
+  color: #555;
+}
+main.main h1.invisible_main_title{
+  display: none;
+}
+main.main div.floating_breadcrumb{
+  display: none;
+}
+
+/* 第一屏 */
+body{
+  position: relative;
+}
+main.main div.first_screen{
+  border: 1px solid black;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  width: var(--page-width);
+  height: 100vh;
+  overflow: hidden;
+
+  background-image: url("../images/_DSC2494.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right 30%;
+}
+main.main div.first_screen video{
+  width: var(--page-width);
+  object-fit: contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+}
+main.main div.first_screen_placeholder{
+  width: 1px;
+  height: 100vh;
+}
+main.main div.first_screen div.scroll_down{
+  /* border: 1px solid red; */
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  text-align: center;
+  opacity: .8;
+  cursor: pointer;
+
+  animation-name: up_down;
+  animation-duration: .6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+@keyframes up_down {
+  100% {
+    bottom: 25px;
+  }
+}
+main.main div.first_screen div.scroll_down span.scroll_down{
+  font-size: 2.4rem;
+  color: #ccc;
+  display: inline-block;
+  font-weight: bold;
+}
+main.main div.first_screen div.scroll_down div.scroll_down_arrow{
+  /* border: 1px solid green; */
+  height: 50px;
+}
+main.main div.first_screen div.scroll_down div.scroll_down_arrow img{
+  width: 40%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+/* 主內容一 */
+main.main div.fist_blank{
+  /* border: 1px solid green; */
+  height: 200px;
+}
+main.main div.first_main_area{
+  /* border: 1px solid blue; */
+}
+main.main div.first_main_area div.text_area{
+  /* border: 1px solid orange; */
+  width: 100%;
+  height: 500px;
+  font-size: 0;
+  margin-bottom: 50px;
+}
+main.main div.first_main_area div.text_area div.title{
+  /* border: 1px solid purple; */
+  width: 35%;
+  height: 100%;
+  display: inline-block;
+  font-size: 1.4rem;
+  vertical-align: top;
+  text-align: right;
+}
+main.main div.first_main_area div.text_area div.title h2.title_text{
+  /* border: 1px solid red; */
+  writing-mode: vertical-lr;
+  display: inline;
+  font-size: 2.8rem;
+  margin: 0 40px;
+  text-align: left;
+  line-height: 1.6em;
+}
+main.main div.first_main_area div.text_area div.content{
+  /* border: 1px solid brown; */
+  width: 65%;
+  height: 100%;
+  display: inline-block;
+  text-align: right;
+}
+main.main div.first_main_area div.text_area div.content p.content_text{
+  /* border: 1px solid black; */
+  margin: 100px 70px 15px 55px;
+  text-indent: 2em;
+  line-height: 2em;
+  text-align: left;
+  font-size: 1.8rem;
+}
+main.main div.first_main_area div.text_area div.content a.to_exploring{
+  /* border: 1px solid red; */
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 4px 7px 5px;
+  background-color: var(--accent-color, #547794);
+  margin-right: 70px;
+  font-size: 1.8rem;
+  transition: all .2s;
+}
+main.main div.first_main_area div.text_area div.content a.to_exploring:hover{
+  text-shadow: 0 0 2px #fff;
+  transform: scale(1.02);
+  background-color: #325572;
+}
+
+main.main div.first_main_area div.picture_area{
+  /* border: 1px solid green; */
+  position: relative;
+  height: 1100px;
+  overflow: hidden;
+}
+main.main div.first_main_area div.picture_area div.picture2{
+  position: absolute;
+  top: 350px;
+  right: 0;
+}
+main.main div.first_main_area div.picture_area div.picture3{
+  position: absolute;
+  top: 750px;
+  right: 500px;
+}
+main.main div.first_main_area div.picture_area span.decoration_text{
+  /* border: 1px solid red; */
+  width: 300px;
+  display: inline-block;
+  position: absolute;
+  right: 875px;
+  top: 650px;
+  font-size: 1.6rem;
+  line-height: 1.8em;
+}
+
+
+/* 主內容二 */
+main.main div.first_hr{
+  border: 1px solid #aaa;
+  width: 90%;
+  margin: 0 auto;
+}
+main.main div.second_blank{
+  height: 200px;
+}
+main.main div.second_main_area{
+  /* border: 1px solid black; */
+  height: 1150px;
+  display: flex;
+}
+main.main div.second_main_area div.left_block{
+  /* border: 1px solid red; */
+  align-self: flex-end;
+}
+main.main div.second_main_area div.middle_block{
+  /* border: 1px solid red; */
+  margin-top: 100px;
+  padding: 0px 100px;
+}
+main.main div.second_main_area div.right_block{
+  /* border: 1px solid red; */
+  align-self: flex-start;
+}
+main.main div.second_main_area div.middle_block div.title{
+  height: 400px;
+}
+main.main div.second_main_area div.middle_block div.title h2.title_text{
+  writing-mode: vertical-lr;
+  margin: 0 auto;
+  font-size: 2.6rem;
+  margin-bottom: 15px;
+  line-height: 1.4em;
+}
+main.main div.second_main_area div.middle_block div.content{
+  /* border: 1px solid red; */
+  margin-top: 15px;
+  text-align: right;
+}
+main.main div.second_main_area div.middle_block div.content p.content_text{
+  text-indent: 2em;
+  line-height: 2em;
+  text-align: left;
+  font-size: 1.8rem;
+  margin: 0px 0px 0px 20px;
+}
+main.main div.second_main_area div.middle_block div.content a.to_story{
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 4px 7px;
+  background-color: var(--accent-color, #547794);
+  font-size: 1.8rem;
+  margin-top: 20px;
+  transition: all .2s;
+}
+main.main div.second_main_area div.middle_block div.content a.to_story:hover{
+  text-shadow: 0 0 2px #fff;
+  transform: scale(1.02);
+  background-color: #325572;
+}
+
+/* 主內容三 */
+main.main div.third_blank{
+  /* border: 1px solid  green; */
+  height: 300px;
+}
+
+main.main div.third_main_area{
+  /* border: 1px solid black; */
+  margin-bottom: 100px;
+}
+main.main div.third_main_area div.shop_info{
+  /* border: 1px solid blue; */
+  font-size: 0;
+  height: 230px;
+  margin-bottom: 100px;
+}
+main.main div.third_main_area div.shop_info div.text_area{
+  /* border: 1px solid green; */
+  display: inline-block;
+  width: 55%;
+  height: 100%;
+  vertical-align: top;
+  padding: 0px 70px 0 100px;
+  position: relative;
+}
+main.main div.third_main_area div.shop_info div.text_area h2.title_text{
+  font-size: 2.8rem;
+  margin-top: 0
+}
+main.main div.third_main_area div.shop_info div.text_area p.content_text{
+  font-size: 1.6rem;
+  line-height: 1.8em;
+}
+main.main div.third_main_area div.shop_info div.text_area a.to_introduction{
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 4px 7px;
+  background-color: var(--accent-color, #547794);
+  position: absolute;
+  right: 60px;
+  bottom: 0;
+  transition: all .2s;
+}
+main.main div.third_main_area div.shop_info div.text_area a.to_introduction:hover{
+  text-shadow: 0 0 2px #fff;
+  transform: scale(1.02);
+  background-color: #325572;
+}
+main.main div.third_main_area div.shop_info div.map_card{
+  /* border: 1px solid brown; */
+  display: inline-block;
+  height: 100%;
+  background-color: var(--secondary-color-1);
+  border-radius: 5px;
+}
+main.main div.third_main_area div.shop_info div.map_card iframe{
+  border: 0;
+  margin: 15px 20px 0 15px;
+  display: inline-block;
+  width: 300px;
+  height: 150px;
+}
+main.main div.third_main_area div.shop_info div.map_card ul.opening_info{
+  display: inline-block;
+  margin: 10px 15px 0 0;
+  list-style: none;
+  padding: 0;
+  vertical-align: top;
+}
+main.main div.third_main_area div.shop_info div.map_card ul.opening_info > li{
+  padding-bottom: 5px;
+  font-size: 1.4rem;
+}
+main.main div.third_main_area div.shop_info div.map_card ul.opening_info > li:first-child{
+  font-size: 1.6rem;
+  font-weight: bolder;
+  padding-bottom: 10px;
+}
+main.main div.third_main_area div.shop_info div.map_card a.address{
+  display: block;
+  text-decoration: none;
+  color: var(--accent-color, #547794);
+  margin: 10px 0 20px 15px;
+  font-size: 1.6rem;
+  }
+main.main div.third_main_area div.shop_info div.map_card a.address:hover{
+  color: #325572;
+}
+main.main div.third_main_area div.shop_info div.map_card a.address > span{
+  transform: rotate(180deg);
+  position: relative;
+  font-size: 1.6rem;
+  top: 3px;
+  right: 2px;
+}
+
+main.main div.third_main_area div.product_browse{
+  /* border: 1px solid green; */
+  text-align: center;
+}
+main.main div.third_main_area div.product_browse h3.product_show{
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 10px 0 25px;
+}
+main.main div.third_main_area div.product_browse div.product_area{
+  display: inline-flex;
+  width: 80%;
+  margin-bottom: 30px;
+  justify-content: space-around;
+}
+main.main div.third_main_area div.product_browse div.product_area div.prodcut_card{
+  /* border: 1px solid red; */
+  padding: 20px 10px;
+  text-align: center;
+  box-shadow: 1px 2px 3px #999;
+  background-color: var(--secondary-color-1);
+  flex-basis: 220px;
+}
+main.main div.third_main_area div.product_browse div.product_area div.prodcut_card > a{
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 0;
+  overflow: hidden;
+}
+main.main div.third_main_area div.product_browse div.product_area div.prodcut_card > a > img{
+  transition: all 0.3s;
+  width: 200px;
+  height: 150px;
+}
+main.main div.third_main_area div.product_browse div.product_area div.prodcut_card > a:hover > img {
+  transform: scale(1.05);
+}
+main.main div.third_main_area div.product_browse div.product_area div.prodcut_card h3.product_title{
+  margin: 10px 0 10px;
+  text-align: left;
+  font-size: 1.6rem;
+}
+main.main div.third_main_area div.product_browse div.product_area div.prodcut_card p.prudoct_info{
+  margin: 0;
+  text-align: left;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  line-height: 1.4em;
+}
+main.main div.third_main_area div.product_browse div.slide_to_left{
+  /* border: 1px solid green; */
+  display: inline-block;
+  position: relative;
+  top: -10px;
+}
+main.main div.third_main_area div.product_browse div.slide_to_right{
+  /* border: 1px solid green; */
+  display: inline-block;
+  position: relative;
+  top: -10px;
+}
+main.main div.third_main_area div.product_browse div.slide_to_left > button, main.main div.third_main_area div.product_browse div.slide_to_right > button{
+  border-radius: 50%;
+  border: 1px solid #aaa;
+  background-color: var(--secondary-color-1);
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+}
+main.main div.third_main_area div.product_browse div.slide_to_left > button > span, main.main div.third_main_area div.product_browse div.slide_to_right > button > span{
+  font-size: 2.4rem;
+  line-height: 2.6rem;
+}
+main.main div.third_main_area div.product_browse div.slide_to_left > button:active, main.main div.third_main_area div.product_browse div.slide_to_right > button:active{
+  background-color: #777;
+}

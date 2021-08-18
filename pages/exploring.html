@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>老屋手札｜老屋探索</title>
+    <link rel="stylesheet" href="../css/exploring.css">
+    <link rel="stylesheet" href="../css/common/all.css">
+    <link rel="stylesheet" href="../css/common/header.css">
+    <link rel="stylesheet" href="../css/common/footer.css">
+    <!-- 載入Google Material Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet">
+    <!-- 載入AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- 載入jQuey -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  </head>
+  <body>
+
+    <header class="header">
+      <nav class="nav_flex_container">
+        <div class="nav_flex_item page">
+          <a class="nav_link -on" href="./exploring.html">老屋探索</a>
+        </div>
+        <div class="nav_flex_item page">
+          <a class="nav_link" href="./story.html">老屋故事</a>
+        </div>
+        <div class="nav_flex_item logo">
+          <a class="nav_link" href="./index.html"><img src="../images/logo.png" alt="logo image"></a>
+        </div>
+        <div class="nav_flex_item page">
+          <a class="nav_link" href="./product.html">文創商品</a>
+        </div>
+        <div class="nav_flex_item page" >
+          <a class="nav_link" href="#">我的最愛</a>
+        </div>
+      </nav>
+
+      <div class="header_right">
+        <a class="cart_link" href="./cart.html">
+          <span class="material-icons cart">&#xe8cc;</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="main">
+
+      <!-- 飄浮式麵包屑 -->
+      <div class="floating_breadcrumb">飄浮式麵包屑</div>
+
+      <!-- Go to top按鈕 -->
+      <div class="GTT_button" data-aos="fade-right" data-aos-duration="1000" data-aos-anchor=".location" data-aos-offset="500">
+        <button class="go_top"><span class="material-icons cart">&#xe316;</span></button>
+        <span>Go to Top</span>
+      </div>
+
+      <!-- Banner -->
+      <div class="banner"></div>
+
+      <div class="intro">
+        <p class="intro_text">這是介紹文字這是介紹文字這是介紹文字這是介紹文字</p>
+        <div class="scroll_down">
+          <span>開始探索</span>
+          <div class="arrow"><span class="material-icons cart">&#xe5c5;</span></div>
+        </div>
+      </div>
+
+      <div class="guide_line_short"></div>
+
+      <!-- 篩選器 -->
+      <div class="filter">
+        <form action="#" class="filter" method="get">
+          <label class="location" for="location">區域：</label>
+          <select id="location">
+            <option value="不限" selected>不限</option>
+            <option value="台北">台北</option>
+            <option value="台中">台中</option>
+            <option value="台南">台南</option>
+            <option value="高雄">高雄</option>
+          </select>
+          <label class="type" for="type">類型：</label>
+          <select id="type">
+            <option value="不限" selected>不限</option>
+            <option value="藝文場所">藝文場所</option>
+            <option value="咖啡廳">咖啡廳</option>
+            <option value="公共用途">公共用途</option>
+            <option value="私有宅邸">私有宅邸</option>
+          </select>
+          <button type="submit" class="filter">篩選</button>
+        </form>
+      </div>
+
+      <!-- 主內容 -->
+      <div class="main_area">
+        <div class="picture_area">
+          <div class="main_image">
+            <img src="https://via.placeholder.com/750x450" alt="an old house picture">
+          </div>
+          <div class="gallery">
+            <img src="https://via.placeholder.com/150x90" class="-on" alt="gallery of old house picture">
+            <img src="https://via.placeholder.com/150x90" class="" alt="gallery of old house picture">
+            <img src="https://via.placeholder.com/150x90" class="" alt="gallery of old house picture">
+          </div>
+        </div>
+        <div class="text_area">
+          <div class="left">
+            <h2 class="title">臺灣祀典武廟臺灣祀典武廟臺灣祀典武廟</h2>
+          </div>
+          <div class="right">
+            <a class="go_to" href="./intro.html">詳細介紹</a>
+            <p class="short_intro">簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹...</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="guide_line_long"></div>
+
+      <div class="main_area">
+        <div class="picture_area">
+          <div class="main_image"><img src="https://via.placeholder.com/750x450" alt="an old house picture"></div>
+          <div class="gallery">
+            <img src="https://via.placeholder.com/150x90" alt="gallery of old house picture">
+            <img src="https://via.placeholder.com/150x90" alt="gallery of old house picture">
+            <img src="https://via.placeholder.com/150x90" alt="gallery of old house picture">
+          </div>
+        </div>
+        <div class="text_area">
+          <div class="left">
+            <h2 class="title">臺灣祀典武廟</h2>
+            <a class="go_to" href="#">詳細介紹</a>
+          </div>
+          <div class="right">
+            <a class="go_to" href="./intro.html">詳細介紹</a>
+            <p class="short_intro">簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹...</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="page_link">
+        <ul class="page_link">
+          <li><a href="./exploring.html">老屋探索</a></li>
+          <li><a href="./story.html">老屋故事</a></li>
+          <li><a href="">文創商品</a></li>
+          <li><a href="">我的最愛</a></li>
+        </ul>
+      </div>
+      <p class="declaration">本網站為緯育TibaMe前端設計工程師班第68期學員專題作品，本平台僅供學習、展示之用。參考 資源:XXXXXXXXXXXXX。若有侵權疑慮，您可以私訊<a href="https://www.facebook.com/webindex/">[TibaMe-前端設計工程師養成班]</a>，後續會由專 人協助處理</p>
+      <div class="index_page_link">
+        <a class="text_logo" href="./index.html"><img src="../images/text_logo.png" alt="文字logo"></a>
+        <a class="logo_image" href="./index.html"><img src="../images/logo_footer.png" alt="logo圖案"></a>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script>
+      $(document).ready(function(){
+        $("button.go_top").on("click", function(){
+          $("html, body").animate({
+            scrollTop: 0
+          }, 500)
+        });
+      });
+    </script>
+  </body>
+</html>

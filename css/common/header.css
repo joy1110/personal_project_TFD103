@@ -1,0 +1,99 @@
+header.header{
+  /* border: 1px solid red; */
+  width: var(--page-width);
+  margin: 0 auto;
+  background-color: var(--primary-color,#F6F3EE);
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+  transition: all .6s;
+  /* padding-bottom: 5px; */
+}
+header.header.hideout{
+  transform: translateY(-100%);
+}
+
+header.header nav.nav_flex_container{
+  /* border: 1px solid blue; */
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+}
+
+/* 導覽列 */
+header.header nav.nav_flex_container div.nav_flex_item{
+  /* border: 1px solid black; */
+  display: inline-block;
+  flex-grow: 1;
+  height: 55px;
+  position: relative;
+  text-align: center;
+}
+/* 導覽列分隔線 */
+header.header nav.nav_flex_container div.nav_flex_item::after, header.header nav.nav_flex_container div.nav_flex_item:first-child::before{
+  /* content: ""; */
+  border: .5px solid var(--accent-color, #547794);
+  display: inline-block;
+  height: 55%;
+  width: 0px;
+  position: absolute;
+  top: 12px;
+  right: 0px;
+}
+header.header nav.nav_flex_container div.nav_flex_item:first-child::before{
+  left: 0px;
+}
+
+header.header nav.nav_flex_container div.nav_flex_item a.nav_link{
+  /* border: 1px solid orange; */
+  text-decoration: none;
+  font-size: 2rem;
+
+  line-height: 55px;
+  color: var(--accent-color, #547794);
+    /* font-family: ;  */
+}
+header.header nav.nav_flex_container div.nav_flex_item.logo{
+  flex-grow: 0;
+  flex-basis: 130px;
+  overflow: hidden;
+}
+header.header nav.nav_flex_container div.nav_flex_item.logo a.nav_link{
+  display: inline-block;
+}
+header.header nav.nav_flex_container div.nav_flex_item.logo img{
+  width: 130px;
+  position: relative;
+  top: -7px;
+}
+
+/* 右側icon按鈕 */
+header.header div.header_right{
+  display: inline-block;
+  /* border: 1px solid green; */
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+header.header div.header_right a.cart_link{
+  display: inline-block;
+}
+header.header div.header_right a.cart_link span.material-icons.cart{
+  /* border: 1px solid red; */
+  font-size: 2.6rem;
+  color: var(--accent-color, #547794);
+  margin-top: 15px;
+  margin-right: 10px;
+}
+
+/* header hover樣式 */
+header.header a{
+  transition: all .25s;
+}
+header.header nav.nav_flex_container div.nav_flex_item.page a.nav_link:hover, header.header nav.nav_flex_container div.nav_flex_item.page a.nav_link.-on, header.header div.header_right a.cart_link:hover span.material-icons.cart, header.header div.header_right a.cart_link.-on span.material-icons.cart{
+  font-weight: bold;
+  color: #246;
+  transform: scale(1.05);
+  text-shadow: 1px 0 2px #7699b6;
+}

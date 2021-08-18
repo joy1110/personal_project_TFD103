@@ -1,0 +1,43 @@
+*{
+  font-size: 62.5%;
+  box-sizing: border-box;
+  --page-width: 100%;
+  --primary-color: #F6F3EE;
+  --accent-color: #547794;
+  --secondary-color-1: #E0E0E0;
+  --secondary-color-2: #C2C9CD;
+  --text-color: #333;
+}
+body{
+  margin: 0 auto;
+  min-width: 1200px;
+}
+
+
+/* Go to Top button */
+main.main div.GTT_button{
+  /* border: 1px solid green; */
+  position: fixed;
+  bottom: 50px;
+  left: 30px;
+  z-index: 20;
+}
+main.main div.GTT_button > button{
+  display: block;
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 0;
+  background-color: #555;
+  cursor: pointer;
+}
+main.main div.GTT_button > button > span{
+  color: #fff;
+}
+main.main div.GTT_button > span{
+  text-align: center;
+  font-size: 1.4rem;
+  color: #555;
+  cursor: pointer;
+}

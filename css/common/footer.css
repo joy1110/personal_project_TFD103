@@ -1,0 +1,60 @@
+footer.footer{
+  /* border: 1px solid green; */
+  height: 160px;
+  font-size: 0;
+  background-color: var(--secondary-color-1);
+}
+footer.footer div.page_link{
+  /* border: 1px solid blue; */
+  width: 20%;
+  height: 100%;
+  display: inline-block;
+  padding: 25px 0 0 100px;
+}
+footer.footer div.page_link ul.page_link{
+  margin: 0;
+  padding: 0;
+}
+footer.footer div.page_link ul.page_link > li{
+  margin-bottom: 5px;
+}
+footer.footer div.page_link ul.page_link > li > a{
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #555;
+}
+footer.footer div.page_link ul.page_link > li > a:hover{
+  text-shadow: 0 0 1.5px #999;
+  color: #333;
+}
+footer.footer p.declaration{
+  display: inline-block;
+  /* border: 1px solid black; */
+  width: 45%;
+  font-size: 1.4rem;
+  line-height: 1.2em;
+  vertical-align: baseline;
+}
+footer.footer p.declaration > a{
+  font-size: 1.4rem;
+  color: #555;
+}
+footer.footer div.index_page_link{
+  display: inline-block;
+  /* border: 1px solid red; */
+  width: 35%;
+  height: 100%;
+  text-align: right;
+  vertical-align: top;
+}
+footer.footer div.index_page_link a.text_logo, footer.footer div.index_page_link a.logo_image{
+  display: inline-block;
+  width: 150px;
+  position: relative;
+  top: 45px;
+  right: 20px;
+  margin: 0 5px;
+}
+footer.footer div.index_page_link a.text_logo > img, footer.footer div.index_page_link a.logo_image > img{
+  width: 150px;
+}

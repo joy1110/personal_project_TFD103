@@ -1,0 +1,192 @@
+body{
+  background-color: var(--primary-color,#F6F3EE);
+  width: var(--page-width);
+  color: #555;
+}
+
+/* 側邊欄 */
+aside.aside{
+  border: 2px solid var(--secondary-color-2);
+  display: inline-block;
+  width: 275px;
+  padding: 0 10px;
+  margin: 0 40px 0 100px;
+  position: sticky;
+  top: 100px;
+  height: 85vh;
+  overflow: scroll;
+  vertical-align: top;
+}
+aside.aside div.author{
+  /* border: 1px solid green; */
+}
+aside.aside div.author div.author_pic{
+  /* border: 1px solid blue; */
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 20px auto 0;
+}
+aside.aside div.author div.author_pic img.author_pic{
+  width: 175px;
+  height: 175px;
+}
+aside.aside div.author span.author_name{
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 15px;
+}
+aside.aside div.author p.author_intro{
+  padding: 0 15px;
+  font-size: 1.6rem;
+  margin: 15px 0 30px;
+}
+aside.aside div.article_list{
+  /* border: 1px solid red; */
+  padding: 0 15px 0 5px;
+  border-left: 1.5px solid #aaa;
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+aside.aside div.article_list div.year{
+  /* border: 1px solid black; */
+  cursor: pointer;
+}
+aside.aside div.article_list div.year span.year > span.material-icons{
+  vertical-align: top;
+  margin-top: 3px;
+}
+aside.aside div.article_list div.year span.year > span{
+  font-size: 1.8rem;
+}
+aside.aside div.article_list div.year div.article{
+  /* border: 1px solid blue; */
+  margin-bottom: 15px;
+}
+aside.aside div.article_list div.year div.article a.article_title{
+  display: block;
+  text-decoration: none;
+  font-size: 1.4rem;
+  padding-left: 5px;
+  color: #666;
+  margin-bottom: 2px;
+}
+aside.aside div.article_list div.year div.article a.article_title:hover{
+  color: #444;
+}
+
+
+/* 文章內容 */
+main.main{
+  /* border: 1px solid black; */
+  display: inline-block;
+  width: calc(100% - 500px);
+  margin-top: 45px;
+}
+main.main div.story_title{
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: space-between;
+}
+main.main div.story_title h1.story_title{
+  display: inline-block;
+  font-size: 2.5rem;
+  margin-left: 15px;
+}
+main.main div.story_title a.go_back{
+  display: inline-block;
+  align-self: center;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #fff;
+  background-color: var(--accent-color);
+  padding: 3px 8px;
+  border: 1px solid var(--secondary-color-2);
+  border-radius: 5px;
+  margin-right: 20px;
+}
+main.main div.story_title a.go_back > span{
+  vertical-align: middle;
+  font-size: 1.8rem;
+  margin-bottom: 3px;
+}
+main.main div.story_title a.go_back:hover{
+  background-color: var(--accent-color);
+  box-shadow: 0 0 3px 2px #7599a6;
+  text-shadow: 0 0 1.5px #fff;
+}
+main.main div.hr_line{
+  width: 100%;
+  height: 0;
+  border: 1px solid #555;
+  margin-bottom: 20px;
+}
+main.main div.para{
+  width: 100%;
+  margin-bottom: 30px;
+}
+main.main div.para div.image_card{
+  border: 1px solid var(--secondary-color-2);
+  display: inline-block;
+}
+main.main div.para div.image_card > span{
+  display: block;
+  padding: 0 10px;
+  margin: 5px 0;
+  font-size: 1.2rem;
+}
+main.main div.para p.para{
+  font-size: 1.6rem;
+  line-height: 2.6em;
+  margin: 0;
+}
+main.main div.para div.image1{
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+main.main div.para div.image2{
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+main.main div.para div.image3{
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+main.main div.bottom_area{
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+main.main div.bottom_area a.previous_article, main.main div.bottom_area a.next_article{
+  display: inline-block;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #555;
+  background-color: var(--secondary-color-2);
+  border: 1.5px solid #777;
+  padding: 5px 10px 1px;
+  transition: all .2s;
+}
+main.main div.bottom_area a.previous_article > span, main.main div.bottom_area a.next_article > span{
+  color: #555;
+  vertical-align: middle;
+  margin-bottom: 4px;
+  font-size: 2.2rem;
+}
+main.main div.bottom_area a.previous_article > span{
+transform: rotate(180deg);
+}
+main.main div.bottom_area a.previous_article:hover, main.main div.bottom_area a.next_article:hover{
+  transform: scale(1.02);
+}
+
+div.bottom_blank{
+  height: 100px;
+}

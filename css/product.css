@@ -1,0 +1,331 @@
+body{
+  background-color: var(--primary-color,#F6F3EE);
+  width: var(--page-width);
+  color: #555;
+}
+
+/* Banner */
+div.banner_area{
+  /* border: 1px solid green; */
+  position: relative;
+  margin-bottom: 150px;
+}
+div.banner_area div.banner{
+  /* border: 1px solid blue; */
+  width: 100%;
+  height: 200px;
+  background-image: url(http://via.placeholder.com/1200x200);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+div.banner_area span.decoration_text{
+  /* border: 1px solid red; */
+  display: inline-block;
+  width: 300px;
+  font-size: 1.6rem;
+  line-height: 1.5em;
+  color: #333;
+  position: absolute;
+  right: 30px;
+  transform: translateY(-50%);
+}
+
+h1.title{
+  font-size: 3rem;
+  font-weight: bold;
+  width: 85%;
+  margin: 0 auto 10px;
+  padding-left: 20px;
+}
+div.hr_line{
+  height: 0;
+  width: 85%;
+  border: 1px solid var(--secondary-color-2);
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+
+/* 側邊欄 */
+aside.aside{
+  border: 2.5px solid var(--secondary-color-2);
+  display: inline-block;
+  width: 20%;
+  margin-left: 7.5%;
+  margin-right: 30px;
+  position: sticky;
+  top: 80px;
+  vertical-align: top;
+  height: 85vh;
+  overflow: scroll;
+}
+aside.aside h2.category{
+  font-size: 2rem;
+  padding-left: 15px;
+  margin: 10px 0;
+}
+aside.aside div.short_line{
+  height: 0;
+  width: 95%;
+  border: 1px solid var(--secondary-color-2);
+  margin: 0 auto 10px;;
+}
+aside.aside div.category{
+  /* border: 1px solid red; */
+}
+aside.aside div.category div.category_title{
+  /* border: 1px solid orange; */
+  font-size: 1.7rem;
+  padding-left: 5px;
+  cursor: pointer;
+}
+aside.aside div.category div.category_title span.material-icons{
+  vertical-align: top;
+}
+aside.aside div.category div.items{
+  /* border: 1px solid blue; */
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+aside.aside div.category div.items > a{
+  display: block;
+  padding: 2px 0 2px 20px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #555;
+}
+aside.aside div.category div.items > a:hover{
+  color: #333;
+  text-shadow: 0 0 1px #555;
+}
+
+
+/* 商品主內容 */
+main.main{
+  /* border: 1px solid black; */
+  width: 64%;
+  display: inline-block;
+}
+main.main div.product_block{
+  /* border: 1px solid blue; */
+}
+main.main div.product_block h2.product_title{
+  font-size: 2.8rem;
+  padding-left: 30px;
+  margin: 5px 0 0;
+}
+main.main div.product_block p.product_intro{
+  font-size: 1.6rem;
+  line-height: 1.5em;
+  display: inline-block;
+  width: 500px;
+  margin: 10px 0 20px;
+  padding-left: 50px;
+}
+main.main div.product_block div.product_gallery{
+  /* border: 1px solid green; */
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+main.main div.product_block div.product_gallery div.product_pic{
+  position: relative;
+}
+main.main div.product_block div.product_gallery div.product_pic button.slide{
+  position: absolute;
+  top: 175px;
+  transform: translateY(-50%);
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+main.main div.product_block div.product_gallery div.product_pic button.slide_right{
+  transform: translateX(-120%) translateY(-50%);
+}
+main.main div.product_block div.product_gallery div.product_pic button.slide span.material-icons{
+  opacity: .5;
+  font-size: 3.4rem;
+  color: #aaa;
+  transition: all .2s;
+}
+main.main div.product_block div.product_gallery div.product_pic button.slide_left span.material-icons{
+  transform: rotate(180deg);
+  margin-left: 5px;
+}
+main.main div.product_block div.product_gallery div.product_pic button.slide_left:hover span.material-icons{
+  transform: scale(1.1) rotate(180deg);
+}
+main.main div.product_block div.product_gallery div.product_pic button.slide_right:hover span.material-icons{
+  transform: scale(1.1);
+}
+main.main div.product_block div.product_gallery div.pic_select{
+  /* border: 1px solid blue; */
+  width: 265px;
+  margin: 8px auto;
+  display: flex;
+  justify-content: space-between;
+}
+main.main div.product_block div.product_gallery div.pic_select > img.mall_pic{
+  width: 80px;
+  height: 60px;
+}
+main.main div.product_block div.product_gallery button.zoom{
+  position: absolute;
+  right: 8px;
+  bottom: 20px;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+main.main div.product_block div.product_gallery button.zoom span.material-icons{
+  font-size: 3.4rem;
+  color: #555;
+}
+main.main div.product_block div.product_gallery button.zoom:hover span.material-icons{
+  color: #333;
+}
+main.main div.product_block div.right_block{
+  display: inline-block;
+  width: calc(100% - 510px);
+  vertical-align: top;
+  margin-top: 30px;
+  text-align: right;
+}
+main.main div.product_block div.right_block div.feature{
+  width: 100%;
+  height: 280px;
+  background-color: var(--secondary-color-1);
+  border: 2.5px solid var(--secondary-color-2);
+  position: relative;
+  right: 10px;
+  z-index: 0;
+}
+main.main div.product_block div.right_block div.feature ul.feature{
+  width: 100%;
+  margin-top: 30px;
+  padding-right: 30px;
+}
+main.main div.product_block div.right_block div.feature ul.feature > li{
+  font-size: 1.5rem;
+  padding: 5px 0;
+}
+main.main div.product_block div.right_block div.number{
+  /* border: 1px solid blue; */
+  vertical-align: bottom;
+  display: inline-block;
+  margin: 15px 25px 0 0;
+}
+main.main div.product_block div.right_block div.number button.add, main.main div.product_block div.right_block div.number button.subtract{
+  border-radius: 2px;
+  font-size: 3rem;
+  width: 40px;
+  background-color: var(--secondary-color-1);
+  border: 1.5px solid #999;
+  margin: 0;
+  padding: 0 0 2px 0;
+  cursor: pointer;
+}
+main.main div.product_block div.right_block div.number button.add:hover, main.main div.product_block div.right_block div.number button.subtract:hover{
+  background-color: #777;
+  color: #fff;
+}
+main.main div.product_block div.right_block div.number span.number{
+  font-size: 2.7rem;
+  border: 1px solid #777;
+  background-color: #fafafa;
+  padding: 0 12px;
+  margin: 0 3px;
+}
+
+main.main div.product_block div.right_block button.add_to_cart{
+  margin: 15px 20px 0 0;
+  border: 2px solid #425572;
+  background-color: var(--accent-color, #547794);
+  color: #fff;
+  width: 150px;
+  padding: 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .2s, background-color .1s;
+}
+main.main div.product_block div.right_block button.add_to_cart:hover{
+  transform: scale(1.02);
+}
+main.main div.product_block div.right_block button.add_to_cart:active{
+  transform: scale(1.02);
+  background-color: #425572;
+}
+main.main div.product_block div.right_block button.add_to_cart > span.material-icons{
+  font-size: 2.5rem;
+}
+main.main div.product_block div.right_block button.add_to_cart:hover > span.material-icons{
+  animation-name: hop;
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+@keyframes hop {
+  50% {
+    transform: translateY(-10%);
+  }
+}
+
+main.main div.seperate_line{
+  height: 0;
+  width: 100%;
+  border: 1px dashed var(--secondary-color-2);
+  margin: 80px 0;
+}
+
+/* 換頁標籤 */
+div.bottom_area{
+  height: 150px;
+}
+div.bottom_area div.pagination{
+  /* border: 1px solid blue; */
+  padding-top: 50px;
+}
+div.bottom_area div.pagination ul.pagination{
+  /* border: 1px solid red; */
+  width: 280px;
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+div.bottom_area div.pagination ul.pagination > li{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #999;
+  border-right: 0;
+}
+div.bottom_area div.pagination ul.pagination > li:last-child{
+  border-right: 1px solid #999;
+}
+div.bottom_area div.pagination ul.pagination > li > a{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #666;
+  text-align: center;
+  line-height: 2.2em;
+}
+div.bottom_area div.pagination ul.pagination > li > a:hover{
+  color: var(--primary-color);
+  background-color: #666
+}
+div.bottom_area div.pagination ul.pagination > li > a > span{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 1.6em;
+}
