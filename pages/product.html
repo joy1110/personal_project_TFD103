@@ -19,7 +19,10 @@
   <body>
 
     <header class="header">
-      <nav class="nav_flex_container">
+      <div class="small_logo">
+        <a class="nav_link" href="./index.html"><img src="../images/logo.png" alt="logo image"></a>
+      </div>
+      <nav class="nav_flex_container -hidden">
         <div class="nav_flex_item page">
           <a class="nav_link" href="./exploring.html">老屋探索</a>
         </div>
@@ -30,12 +33,16 @@
           <a class="nav_link" href="./index.html"><img src="../images/logo.png" alt="logo image"></a>
         </div>
         <div class="nav_flex_item page">
-          <a class="nav_link -on" href="./product.html">文創商品</a>
+          <a class="nav_link" href="./product.html">文創商品</a>
         </div>
         <div class="nav_flex_item page" >
           <a class="nav_link" href="#">我的最愛</a>
         </div>
       </nav>
+
+      <div class="nav_switch_outside">
+        <div class="nav_switch"></div>
+      </div>
 
       <div class="header_right">
         <a class="cart_link" href="./cart.html">
@@ -238,6 +245,7 @@
       </div>
     </footer>
 
+    <script src="../js/common/header.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();

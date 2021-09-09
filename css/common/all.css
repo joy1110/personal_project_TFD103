@@ -1,17 +1,25 @@
 *{
   font-size: 62.5%;
   box-sizing: border-box;
+  font-family: "Songti TC", serif;
+}
+:root{
   --page-width: 100%;
   --primary-color: #F6F3EE;
   --accent-color: #547794;
   --secondary-color-1: #E0E0E0;
   --secondary-color-2: #C2C9CD;
   --text-color: #333;
-  font-family: "Songti TC", serif;
 }
 body{
   margin: 0 auto;
-  min-width: 1200px;
+  /* min-width: 1200px; */
+  /* max-width: 1300px; */
+}
+@media (max-width: 575.98px){
+  body{
+    min-width: 320px;
+  }
 }
 
 
@@ -23,6 +31,23 @@ main.main div.GTT_button{
   left: 30px;
   z-index: 20;
 }
+@media (max-width: 991.98px) and (min-width: 768px){
+  main.main div.GTT_button{
+    left: 15px;
+  }
+}
+@media (max-width: 767.98px) and (min-width: 576px){
+  main.main div.GTT_button{
+    left: 10px;
+    bottom: 30px
+  }
+}
+@media (max-width: 575.98px){
+  main.main div.GTT_button{
+    left: 8px;
+    bottom: 20px
+  }
+}
 main.main div.GTT_button > button{
   display: block;
   margin: 0 auto;
@@ -33,12 +58,29 @@ main.main div.GTT_button > button{
   background-color: #555;
   cursor: pointer;
 }
+@media (max-width: 991.98px){
+  main.main div.GTT_button > button{
+    width: 35px;
+    height: 35px
+  }
+}
 main.main div.GTT_button > button > span{
   color: #fff;
+  width: 100%;
+  text-align: center;
+}
+@media (max-width: 991.98px) and (min-width: 768px){
+  main.main div.GTT_button > button > span{
+    font-size: 2rem;
+  }
 }
 main.main div.GTT_button > span{
   text-align: center;
   font-size: 1.4rem;
   color: #555;
   cursor: pointer;
+}
+@media (max-width: 991.98px) and (min-width: 768px){
+  main.main div.GTT_button > span{
+  }
 }

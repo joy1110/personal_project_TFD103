@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./vendors/slick-1.8.1/slick/slick.css"/>
+    <!--Add the new slick-theme.css if you want the default styling-->
+    <link rel="stylesheet" type="text/css" href="./vendors/slick-1.8.1/slick/slick-theme.css"/>
+
+    <!-- 載入Google Material Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet">
+
+    <style>
+      .my-slider{
+        width: 800px;
+        margin: 0 auto;
+      }
+      button.slick-arrow{
+        height: 30px;
+        width: 30px;
+        transform: translateX(-10px);
+      }
+      button.slick-arrow:before{
+        color: black;
+        content: "";
+      }
+      span.material-icons{
+        border: 1px solid black;
+        font-size: 20px;
+        line-height: 1em;
+        color: black;
+        border-radius: 50%;
+      }
+      span.material-icons:hover{
+        background-color: black !important;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="my-slider">
+      <div><img src="./images/index_product2.jpg"></div>
+      <div><img src="./images/index_product2.jpg"></div>
+      <div><img src="./images/index_product3.jpg"></div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="./vendors/slick-1.8.1/slick/slick.min.js"></script>
+
+    <script type="text/javascript" src="./js/slick.js"></script>
+  </body>
+</html>

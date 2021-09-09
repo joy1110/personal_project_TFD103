@@ -18,8 +18,11 @@
   </head>
   <body>
 
-    <header class="header hideout">
-      <nav class="nav_flex_container">
+    <header class="header">
+      <div class="small_logo">
+        <a class="nav_link" href="./index.html"><img src="../images/logo.png" alt="logo image"></a>
+      </div>
+      <nav class="nav_flex_container -hidden">
         <div class="nav_flex_item page">
           <a class="nav_link" href="./exploring.html">老屋探索</a>
         </div>
@@ -37,6 +40,10 @@
         </div>
       </nav>
 
+      <div class="nav_switch_outside">
+        <div class="nav_switch"></div>
+      </div>
+
       <div class="header_right">
         <a class="cart_link" href="./cart.html">
           <span class="material-icons cart">&#xe8cc;</span>
@@ -44,15 +51,14 @@
       </div>
     </header>
 
-    <main class="main">
-      <h1 class="invisible_main_title">老屋手札</h1>
+
 
       <!-- 第一屏 -->
       <div class="first_screen">
-        <video autoplay muted disablePictureInPicture loop playsinline>
-          <!-- <source src="../images/test.mp4" type="video/mp4"> -->
-          <!-- <source src="#" type="video/ogg"> -->
-        </video>
+        <!-- <video autoplay muted disablePictureInPicture loop playsinline>
+          <source src="../images/test.mp4" type="video/mp4">
+          <source src="#" type="video/ogg">
+        </video> -->
         <div class="logo1">
           <img src="../images/logo-1.png">
           <img src="../images/logo-2.png">
@@ -62,13 +68,17 @@
           <img src="../images/logo-4.png">
         </div>
         <div class="scroll_down">
-          <span class="scroll_down">Scroll Down</span>
+          <span class="scroll_down">Click to Scroll</span>
           <div class="scroll_down_arrow">
             <img src="../images/scroll_down_arrow.png" alt="">
           </div>
         </div>
       </div>
       <div class="first_screen_placeholder"></div>
+
+
+    <main class="main">
+      <h1 class="invisible_main_title">老屋手札</h1>
 
       <!-- 飄浮式麵包屑 -->
       <div class="floating_breadcrumb">飄浮式麵包屑</div>
@@ -147,7 +157,7 @@
               <li>實體店鋪資訊</li>
               <li>營業日期：ㄧ～六</li>
               <li>營業時間：11:00~20:00</li>
-              <li>電話：02 2712-0589</li>
+              <li>電話：(02)2712-0589</li>
             </ul>
             <a class="address" href="https://www.google.com/maps/place/緯育TibaMe台北Java就業養成班/@25.052128,121.5432529,15z/data=!4m5!3m4!1s0x0:0x1459df8556710135!8m2!3d25.052128!4d121.5432529">04506台北市中山區南京東路三段219號5樓<span class="material-icons cart">&#xe579;</span></a>
           </div>
@@ -156,6 +166,7 @@
         <div class="product_browse">
           <h3 class="product_show">熱門搶先推薦</h3>
           <div class="slide_to_left"><button><span class="material-icons cart">&#xe5cb;</span></button></div>
+          <div class="frame">
           <div class="product_area">
             <div class="prodcut_card" >
               <a href="./product.html"><img src="../images/index_product1.jpg" alt="picture of the product"></a>
@@ -163,7 +174,7 @@
               <p class="prudoct_info">以老屋的鐵窗花圖樣作為設計靈感，使用雷射精密切割而成的...</p>
             </div>
             <div class="prodcut_card" >
-              <a href="./product.html"><img src="../images/index_prouduct2.jpg" alt="picture of the product"></a>
+              <a href="./product.html"><img src="../images/index_product2.jpg" alt="picture of the product"></a>
               <h3 class="product_title">鐵窗花畫版——吉星高照</h3>
               <p class="prudoct_info">以老屋的鐵窗花圖樣作為設計靈感，使用雷射精密切割而成的...</p>
             </div>
@@ -177,6 +188,27 @@
               <h3 class="product_title">鐵窗花畫版——富士山</h3>
               <p class="prudoct_info">以雷射精密雕刻技術，將古樸的鐵花窗式樣刻印於304不銹鋼...</p>
             </div>
+            <div class="prodcut_card" >
+              <a href="./product.html"><img src="../images/index_product1.jpg" alt="picture of the product"></a>
+              <h3 class="product_title">鐵窗花畫版——富士山</h3>
+              <p class="prudoct_info">以老屋的鐵窗花圖樣作為設計靈感，使用雷射精密切割而成的...</p>
+            </div>
+            <div class="prodcut_card" >
+              <a href="./product.html"><img src="../images/index_product2.jpg" alt="picture of the product"></a>
+              <h3 class="product_title">鐵窗花畫版——吉星高照</h3>
+              <p class="prudoct_info">以老屋的鐵窗花圖樣作為設計靈感，使用雷射精密切割而成的...</p>
+            </div>
+            <div class="prodcut_card" >
+              <a href="./product.html"><img src="../images/index_product3.jpg" alt="picture of the product"></a>
+              <h3 class="product_title">台灣典型鐵花窗胸章</h3>
+              <p class="prudoct_info">收錄台灣各地最常見的鐵花窗樣式，拼湊成小時記憶中美好的...</p>
+            </div>
+            <div class="prodcut_card" >
+              <a href="./product.html"><img src="../images/index_product4.png" alt="picture of the product"></a>
+              <h3 class="product_title">鐵窗花畫版——富士山</h3>
+              <p class="prudoct_info">以雷射精密雕刻技術，將古樸的鐵花窗式樣刻印於304不銹鋼...</p>
+            </div>
+          </div>
           </div>
           <div class="slide_to_right"><button><span class="material-icons cart">&#xe5cc;</span></button></div>
         </div>
@@ -200,6 +232,7 @@
       </div>
     </footer>
 
+    <script src="../js/common/header.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
@@ -208,18 +241,17 @@
     <script>
       $(document).ready(function(){
         let viewportHeight = $(window).height();
-        let header = $("header.header");
-
-        window.addEventListener("scroll", function(){
-          console.log("hi");
-          let position = this.scrollY;
-          if(position > viewportHeight){
-            header.removeClass("hideout");
-          }
-          if(position < viewportHeight){
-            header.addClass("hideout");
-          }
-        });
+        // let header = $("header.header");
+        //
+        // window.addEventListener("scroll", function(){
+        //   let position = this.scrollY;
+        //   if(position > viewportHeight){
+        //     header.removeClass("hideout");
+        //   }
+        //   if(position < viewportHeight){
+        //     header.addClass("hideout");
+        //   }
+        // });
 
         // $("html, body").scrollTop(0);
 
@@ -231,7 +263,7 @@
 
         $("div.scroll_down").on("click", function(){
           $("html, body").animate({
-            scrollTop: viewportHeight + 180
+            scrollTop: viewportHeight + 130
           }, 500)
         });
 
