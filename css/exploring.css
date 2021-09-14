@@ -3,6 +3,10 @@ body{
   width: var(--page-width);
   color: #555;
 }
+img{
+  max-width: 100%;
+  max-height: 100%;
+}
 
 main.main div.floating_breadcrumb{
   display: none;
@@ -19,6 +23,11 @@ main.main div.banner{
   background-size: cover;
   background-position: 60% 90%;
 }
+@media (max-width: 767.98px){
+  main.main div.banner{
+    background-position: 40% 90%;
+  }
+}
 main.main div.intro{
   /* border: 1px solid green; */
   text-align: center;
@@ -27,7 +36,12 @@ main.main div.intro p.intro_text{
   font-size: 2.8rem;
   text-align: center;
   margin: 0;
-  padding-top: 20px;
+  padding: 20px 8% 0;
+}
+@media (max-width: 575.98px){
+  main.main div.intro p.intro_text{
+    font-size: 2.4rem;
+  }
 }
 main.main div.intro div.scroll_down{
   /* border: 1px solid black; */
@@ -71,7 +85,7 @@ main.main div.intro div.scroll_down div.arrow span{
 }
 
 main.main div.guide_line_short{
-  border: 1.5px dashed var(--secondary-color-2);
+  border-left: 2px dashed var(--secondary-color-2);
   width: 0;
   height: 170px;
   margin: 50px auto 50px;
@@ -80,13 +94,26 @@ main.main div.guide_line_short{
 /* 篩選器 */
 main.main div.filter{
   /* border: 1px solid black; */
-  margin: 0px 0 65px 250px;
+  margin: 0px 0 65px 22%;
   display: inline-block;
   width: 425px;
   padding: 5px 10px;
   background-color: var(--secondary-color-1);
   border-radius: 3px;
   border: 1.5px solid var(--secondary-color-2);
+}
+@media (max-width: 767.98px){
+  main.main div.filter{
+    display: block;
+    margin: 0px auto 65px;
+  }
+}
+@media (max-width: 575.98px){
+  main.main div.filter{
+    padding: 5px 5px;
+    width: 300px;
+    text-align: center;
+  }
 }
 main.main div.filter form.filter{
   /* border: 1px solid blue; */
@@ -101,12 +128,28 @@ main.main div.filter form.filter label{
   font-size: 1.6rem;
   line-height: 3em;
 }
+@media (max-width: 575.98px){
+  main.main div.filter form.filter label{
+    font-size: 1.4rem;
+  }
+}
 main.main div.filter form.filter label.type{
   margin-left: 30px;
+}
+@media (max-width: 575.98px){
+  main.main div.filter form.filter label.type{
+    margin-left: 15px;
+  }
 }
 main.main div.filter form.filter select{
   width: 90px;
   font-size: 1.6rem;
+}
+@media (max-width: 575.98px){
+  main.main div.filter form.filter select{
+    width: 80px;
+    font-size: 1.4rem;
+  }
 }
 main.main div.filter form.filter button.filter{
   font-size: 1.6rem;
@@ -118,8 +161,25 @@ main.main div.filter form.filter button.filter{
   padding: 3px 7px;
   cursor: pointer;
 }
+@media (max-width: 575.98px){
+  main.main div.filter form.filter button.filter{
+    margin: 10px;
+    font-size: 1.4rem;
+    padding: 3px 10px;
+    width: 90%;
+    border-radius: 2px;
+  }
+}
+main.main div.filter form.filter button.filter:hover{
+  background-color: #6488a5;
+  text-shadow: 0 0 1px #ddd;
+}
 
 /* 主內容 */
+main.main{
+  max-width: 1300px;
+  margin: 0 auto;
+}
 main.main div.main_area{
   /* border: 1px solid black; */
 }
@@ -132,13 +192,30 @@ main.main div.main_area div.picture_area{
   font-size: 0;
   padding-left: 200px;
 }
+@media (max-width: 1199.98px) and (min-width: 992px){
+  main.main div.main_area div.picture_area{
+    margin: 0 auto;
+    padding: 0;
+    justify-content: center;
+  }
+}
+@media (max-width: 991.98px){
+  main.main div.main_area div.picture_area{
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 main.main div.main_area div.picture_area div.main_image{
   /* border: 1px solid blue; */
   display: inline-block;
-}
-main.main div.main_area div.picture_area div.main_image > img{
   width: 700px;
-  height: 450px;
+}
+@media (max-width: 768.98px) {
+  main.main div.main_area div.picture_area div.main_image{
+    width: 91%;
+    /* height: 58.5%; */
+  }
 }
 main.main div.main_area div.picture_area div.gallery{
   /* border: 1px solid green; */
@@ -148,39 +225,108 @@ main.main div.main_area div.picture_area div.gallery{
   flex-basis: 180px;
   padding: 0 15px;
 }
+@media (max-width: 991.98px){
+  main.main div.main_area div.picture_area div.gallery{
+    flex-direction: row;
+    justify-content: center;
+    flex-basis: auto;
+  }
+}
 main.main div.main_area div.picture_area div.gallery > img{
   margin-top: 10px;
   cursor: pointer;
   width: 150px;
   height: 90px;
 }
+@media (max-width: 991.98px){
+  main.main div.main_area div.picture_area div.gallery > img{
+    margin-right: 10px;
+  }
+}
+@media (max-width: 768.98px){
+  main.main div.main_area div.picture_area div.gallery > img{
+    width: 19.5%;
+    height: 11.7%;
+  }
+}
 main.main div.main_area div.picture_area div.gallery > img.-on{
-  box-shadow: 0 0 15px rgba(0, 0, 0, .3) inset;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, .8);
 }
 
 main.main div.main_area div.text_area{
   /* border: 1px solid blue; */
   font-size: 0;
-  padding-left: 200px;
+  margin-left: 200px;
   padding-top: 25px;
+  width: 850px;
+}
+@media (max-width: 1199.98px) and (min-width: 992px){
+  main.main div.main_area div.text_area{
+    margin: 0 auto;
+  }
+}
+@media (max-width: 991.98px) and (min-width: 768px){
+  main.main div.main_area div.text_area{
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 30px;
+  }
+}
+@media (max-width: 767.98px){
+  main.main div.main_area div.text_area{
+    margin-left: 0;
+    padding: 0 3%;
+    width: 100%;
+  }
 }
 main.main div.main_area div.text_area div.left{
   /* border: 1px solid green; */
   display: inline-block;
+  width: 32%;
   vertical-align: top;
-  margin-left: 15px;
+  text-align: right;
+}
+@media (max-width: 767.98px){
+  main.main div.main_area div.text_area div.left{
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
 }
 main.main div.main_area div.text_area div.left h2.title{
   font-size: 2.6rem;
   margin: 0;
+  display: inline-block;
   width: 250px;
+  padding-left: 15px;
+  text-align: left;
+}
+@media (max-width: 991.98px) and (min-width: 768px){
+  main.main div.main_area div.text_area div.left h2.title{
+    padding-left: 0;
+    /* margin-left: 30%; */
+    width: 200px;
+  }
+}
+@media (max-width: 767.98px){
+  main.main div.main_area div.text_area div.left h2.title{
+    width: auto;
+    margin: 10px 0;
+  }
 }
 main.main div.main_area div.text_area div.right{
   /* border: 1px solid red; */
   display: inline-flex;
+  width: 68%;
   flex-direction: column-reverse;
   vertical-align: top;
   position: relative;
+}
+@media (max-width: 767.98px){
+  main.main div.main_area div.text_area div.right{
+    display: flex;
+    width: 100%;
+  }
 }
 main.main div.main_area div.text_area div.right a.go_to{
   display: inline-block;
@@ -191,17 +337,40 @@ main.main div.main_area div.text_area div.right a.go_to{
   padding: 3px 5px;
   font-size: 2rem;
   align-self: flex-end;
+  margin-top: 10px;
+  white-space: nowrap;
+}
+@media (max-width: 991.98px) and (min-width: 768px){
+  main.main div.main_area div.text_area div.right a.go_to{
+    align-self: center;
+    margin-left: 300px;
+  }
+}
+@media (max-width: 767.98px){
+  main.main div.main_area div.text_area div.right a.go_to{
+    margin-right: 10px;
+  }
 }
 main.main div.main_area div.text_area div.right p.short_intro{
   font-size: 1.6rem;
-  width: 600px;
   margin: 0;
   line-height: 1.6em;
   padding-left: 30px;
 }
-
+@media (max-width: 991.98px) and (min-width: 768px){
+  main.main div.main_area div.text_area div.right p.short_intro{
+    padding-left: 20px;
+    width: 470px;
+  }
+}
+@media (max-width: 767.98px){
+  main.main div.main_area div.text_area div.right p.short_intro{
+    width: auto;
+    padding: 0 20px;
+  }
+}
 main.main div.guide_line_long{
-  border: 1.5px dashed var(--secondary-color-2);
+  border-left: 2px dashed var(--secondary-color-2);
   width: 0;
   height: 250px;
   margin: 50px auto 50px;

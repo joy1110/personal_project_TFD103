@@ -4,18 +4,97 @@ body{
   color: #555;
 }
 
+div.main_content{
+  max-width: 1300px;
+  margin: 0 auto;;
+}
+
 /* 側邊欄 */
 aside.aside{
   border: 2px solid var(--secondary-color-2);
   display: inline-block;
   width: 275px;
   padding: 0 10px;
-  margin: 0 40px 0 100px;
+  margin: 0 40px 30px 100px;
   position: sticky;
-  top: 100px;
+  top: 80px;
   height: 85vh;
-  overflow: scroll;
+  overflow-y: scroll;
   vertical-align: top;
+  transition: transform .5s;
+  z-index: 2;
+}
+@media (max-width: 1199.98px) and (min-width: 992px){
+  aside.aside{
+    margin-left: 6%;
+  }
+}
+@media (max-width: 991.98px) and (min-width: 768px){
+  aside.aside{
+    width: 225px;
+    margin-left: 4%;
+    padding: 0 5px;
+  }
+}
+@media (max-width: 767.98px){
+  aside.aside{
+    position: fixed;
+    margin: 0;
+    top: 55px;
+    height: calc(100vh - 55px);
+    transform: translateX(-100%);
+    background-color: var(--primary-color);
+  }
+  aside.aside.-on{
+    transform: translateX(0);
+  }
+}
+div.mobile_switch{
+  position: fixed;
+  left: 0;
+  top: 80px;
+  width: 40px;
+  border: 2px solid var(--secondary-color-2);
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 0 5px 5px 0;
+  z-index: 1;
+  cursor: pointer;
+  display: none;
+  background-color: var(--primary-color);
+  transform: translateX(0%);
+
+  transition: transform 1s;
+}
+@media (max-width: 767.98px){
+  div.mobile_switch{
+    display: block;
+  }
+  div.mobile_switch.-off{
+    transform: translateX(-100%);
+  }
+}
+@media (max-width: 575.98px){
+  div.mobile_switch{
+    width: 25px;
+    font-size: 1.6rem
+  }
+}
+aside.aside div.mobile_close{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 767.98px){
+  aside.aside div.mobile_close{
+    display: block;
+  }
+}
+aside.aside div.mobile_close > span{
+  font-size: 2.6rem;
+  color: #555;
 }
 aside.aside div.author{
   /* border: 1px solid green; */
@@ -28,9 +107,15 @@ aside.aside div.author div.author_pic{
   overflow: hidden;
   margin: 20px auto 0;
 }
+@media (max-width: 991.98px) and (min-width: 768px){
+  aside.aside div.author div.author_pic{
+    width: 125px;
+    height: 125px;
+  }
+}
 aside.aside div.author div.author_pic img.author_pic{
-  width: 175px;
-  height: 175px;
+  width: 100%;
+  height: 100%;
 }
 aside.aside div.author span.author_name{
   display: block;
@@ -53,11 +138,21 @@ aside.aside div.article_list{
 }
 aside.aside div.article_list div.year{
   /* border: 1px solid black; */
+}
+aside.aside div.article_list div.year:last-child{
+  margin-bottom: 100px;
+}
+aside.aside div.article_list div.year span.year{
   cursor: pointer;
 }
 aside.aside div.article_list div.year span.year > span.material-icons{
   vertical-align: top;
   margin-top: 3px;
+  transform: rotate(-90deg);
+  transition: transform .2s;
+}
+aside.aside div.article_list div.year span.year > span.material-icons.-on{
+  transform: rotate(0deg);
 }
 aside.aside div.article_list div.year span.year > span{
   font-size: 1.8rem;
@@ -65,14 +160,18 @@ aside.aside div.article_list div.year span.year > span{
 aside.aside div.article_list div.year div.article{
   /* border: 1px solid blue; */
   margin-bottom: 15px;
+  overflow: hidden;
 }
 aside.aside div.article_list div.year div.article a.article_title{
-  display: block;
+  display: none;
   text-decoration: none;
   font-size: 1.4rem;
   padding: 3px 0 3px 5px;
   color: #666;
   margin-bottom: 2px;
+}
+aside.aside div.article_list div.year div.article a.article_title.-on{
+  display: block;
 }
 aside.aside div.article_list div.year div.article a.article_title:hover{
   color: #444;
@@ -86,15 +185,45 @@ main.main{
   width: calc(100% - 500px);
   margin-top: 45px;
 }
+@media (max-width: 1199.98px) and (min-width: 992px){
+  main.main{
+    width: calc(100% - 41%);
+  }
+}
+@media (max-width: 991.98px) and (min-width: 768px){
+  main.main{
+    width: calc(100% - 4% - 275px - 40px);
+  }
+}
+@media (max-width: 767.98px){
+  main.main{
+    display: block;
+    width: 85%;
+    margin: 0 auto;
+    padding-left: 2%;
+  }
+}
 main.main div.story_title{
   /* border: 1px solid green; */
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 575.98px){
+  main.main div.story_title{
+    flex-wrap: wrap;
+  }
+}
 main.main div.story_title h1.story_title{
   display: inline-block;
   font-size: 2.5rem;
   margin-left: 15px;
+}
+@media (max-width: 575.98px){
+  main.main div.story_title h1.story_title{
+    flex-basis: 100%;
+    padding-right: 20%;
+    margin: 20px 0 10px;
+  }
 }
 main.main div.story_title a.go_back{
   display: inline-block;
@@ -107,6 +236,12 @@ main.main div.story_title a.go_back{
   border: 1px solid var(--secondary-color-2);
   border-radius: 5px;
   margin-right: 20px;
+}
+@media (max-width: 575.98px){
+  main.main div.story_title a.go_back{
+    margin-bottom: 10px;
+    margin-left: 8px;
+  }
 }
 main.main div.story_title a.go_back > span{
   vertical-align: middle;
@@ -131,22 +266,54 @@ main.main div.para{
 main.main div.para div.image_card{
   border: 1px solid var(--secondary-color-2);
   display: inline-block;
+  width: 200px;
+  font-size: 0;
+}
+@media (max-width: 991.98px) and (min-width: 768px){
+  main.main div.para div.image_card{
+    width: 175px;
+  }
+}
+@media (max-width: 767.98px){
+  main.main div.para div.image_card{
+    width: 30%;
+    min-width: 120px;
+  }
+}
+main.main div.para div.image_card::after{
+  content: "";
+  display: block;
+  width: 100%;
+  clear: both;
 }
 main.main div.para div.image_card > span{
   display: block;
   padding: 0 10px;
   margin: 5px 0;
   font-size: 1.2rem;
+  clear: both;
+}
+@media (max-width: 575.98px){
+  main.main div.para div.image_card > span{
+    padding: 0 5px;
+    margin: 3px 0;
+  }
 }
 main.main div.para p.para{
   font-size: 1.6rem;
   line-height: 2.6em;
   margin: 0;
 }
+@media (max-width: 575.98px){
+  main.main div.para p.para{
+    font-size: 1.4rem;
+  }
+}
 main.main div.para div.image1{
   float: left;
   margin-right: 20px;
   margin-bottom: 5px;
+  overflow: hidden;
 }
 main.main div.para div.image2{
   float: right;
@@ -157,6 +324,9 @@ main.main div.para div.image3{
   float: left;
   margin-right: 20px;
   margin-bottom: 5px;
+}
+main.main div.para div.image1 > img, main.main div.para div.image2 > img, main.main div.para div.image3 > img{
+  width: 100%;
 }
 main.main div.bottom_area{
   /* border: 1px solid blue; */

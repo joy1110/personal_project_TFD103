@@ -51,9 +51,11 @@
       </div>
     </header>
 
-    <div main_content>
+    <div class="main_content">
       <!-- 側邊欄 -->
+      <div class="mobile_switch">關於作者</div>
       <aside class="aside">
+        <div class="mobile_close"><span class="material-icons cart">&#xe5cd;</span></div>
         <div class="author">
           <div class="author_pic">
             <img class="author_pic" src="../images/avatar2.jpg" alt="picture of the author">
@@ -143,7 +145,7 @@
           </div>
 
           <p class="para para1">
-              座落在台南⺠族、永福路口的祀典武廟，是台南市區極富盛名的關帝廟。 清朝雍正時因政權為外族身份⽽貶岳飛褒關公，武廟因而被升為享有祀典的官廟，地位崇高，其⾝份與作為文廟之首的南⾨路「全台首學」孔廟互為並列，一⽂一武，各為府城之代表。其廟體建築歷史悠久，極具文化價值，廟內更保有許多年代久遠的匾額、文物，或相傳由明寧靖王親⼿植下的古梅，十分具有參觀價值。祀典武廟設立的最早起源，是鄭經在府城所修建的四座廟宇，其中之一的關帝廟。但最初設立於明寧靖王府邸後院，為私人祭祀之用。改朝易代之後，經歷了數次的整修，廟體愈發繁華、擴張，乾隆年間知府蔣元樞⼤大地修建了武廟，⼤致確立了保留⾄今的規模，雖日治時期永福路擴建時曾拆去武廟的⼀小部分，但整體⽽⾔保存仍極完整，⼗分可貴。
+              座落在台南民族、永福路口的祀典武廟，是台南市區極富盛名的關帝廟。 清朝雍正時因政權為外族身份⽽貶岳飛褒關公，武廟因而被升為享有祀典的官廟，地位崇高，其⾝份與作為文廟之首的南⾨路「全台首學」孔廟互為並列，一⽂一武，各為府城之代表。其廟體建築歷史悠久，極具文化價值，廟內更保有許多年代久遠的匾額、文物，或相傳由明寧靖王親⼿植下的古梅，十分具有參觀價值。祀典武廟設立的最早起源，是鄭經在府城所修建的四座廟宇，其中之一的關帝廟。但最初設立於明寧靖王府邸後院，為私人祭祀之用。改朝易代之後，經歷了數次的整修，廟體愈發繁華、擴張，乾隆年間知府蔣元樞⼤大地修建了武廟，⼤致確立了保留⾄今的規模，雖日治時期永福路擴建時曾拆去武廟的⼀小部分，但整體⽽⾔保存仍極完整，⼗分可貴。
           </p>
         </div>
 
@@ -181,10 +183,10 @@
           </a>
         </div>
 
+        <div class="bottom_blank"></div>
+
       </main>
     </div>
-
-    <div class="bottom_blank"></div>
 
     <footer class="footer">
       <div class="page_link">
@@ -214,6 +216,26 @@
           $("html, body").animate({
             scrollTop: 0
           }, 500)
+        });
+
+        //側邊欄開關
+        $("div.mobile_switch").on("click", function(){
+          $("aside.aside").addClass("-on");
+          $(this).addClass("-off");
+        });
+
+        $("div.mobile_close").on("click", function(){
+          $("aside.aside").removeClass("-on");
+          $("div.mobile_switch").removeClass("-off");
+        });
+
+        //側邊欄文章收合
+        $("div.article").on("click", function(e){
+          e.stopPropagation();
+        });
+        $("span.year").on("click", function(e){
+          $(this).find("a.article_title").toggleClass("-on");
+          $(this).find("span.material-icons").toggleClass("-on");
         });
       });
     </script>

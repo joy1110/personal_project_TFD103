@@ -163,7 +163,7 @@
             <img src="../images/avatar7.jpg" class="author" alt="picture of the author">
             <h2 class="story_title">古巷弄裡的九重葛</h2>
           </div>
-          <p class="story_short">近幾年旅遊熱度漸長的新美街，是一條從清代就存在的古老街道，我家三代都住在此處。從二樓窗戶望出去，恰巧可以看到一株九重葛...</p>
+          <p class="story_short">近幾年旅遊熱度漸長的新美街，是一條從清代就存在的古老街道，我家三代都住在此處。從二樓窗戶望出去，恰巧可以看到一株九重葛近幾年旅遊熱度漸長的新美街，是一條從清代就存在的古老街道，我家三代都住在此處。從二樓窗戶望出去，恰巧可以看到一株九重葛</p>
           <a class="go_to" href="story_detail.html">閱讀故事</a>
         </div>
 
@@ -213,6 +213,17 @@
             scrollTop: 0
           }, 500)
         });
+
+
+        //簡述超過55字元自動刪除
+        let intro = document.getElementsByClassName("story_short");
+        for(let i = 0; i < intro.length; i++){
+          if(intro[i].innerText.length > 55){
+            let newText = intro[i].innerText.substring(0 , 54) + "...";
+            intro[i].innerText = newText;
+          }
+          intro[i].style.display = "block";
+        }
       });
     </script>
   </body>

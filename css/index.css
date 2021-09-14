@@ -677,20 +677,16 @@ main.main div.third_main_area div.shop_info div.text_area a.to_introduction:hove
 main.main div.third_main_area div.shop_info div.map_card{
   /* border: 1px solid brown; */
   display: inline-block;
-  height: 100%;
   background-color: var(--secondary-color-1);
   border-radius: 5px;
+  max-width: 45%;
 
   position: relative;
 }
 @media (max-width: 991.98px){
   main.main div.third_main_area div.shop_info div.map_card{
     display: block;
-    margin: 80px 7% 0 10%;
-  }
-}
-@media (max-width: 991.98px){
-  main.main div.third_main_area div.shop_info div.map_card{
+    max-width: none;
     margin: 80px 5% 0 7%;
   }
 }
@@ -718,6 +714,12 @@ main.main div.third_main_area div.shop_info div.map_card ul.opening_info{
   list-style: none;
   padding: 0;
   vertical-align: top;
+  width: calc(100% - 300px - 50px);
+}
+@media (max-width: 991.98px){
+  main.main div.third_main_area div.shop_info div.map_card ul.opening_info{
+    width: calc(100% - 40% - 50px);
+  }
 }
 main.main div.third_main_area div.shop_info div.map_card ul.opening_info > li{
   padding-bottom: 5px;
@@ -728,6 +730,28 @@ main.main div.third_main_area div.shop_info div.map_card ul.opening_info > li:fi
   font-weight: bolder;
   padding-bottom: 10px;
 }
+main.main div.third_main_area div.shop_info div.map_card ul.opening_info > li > a.address_mobile{
+  display: none;
+  text-decoration: none;
+  color: var(--accent-color, #547794);
+  margin-top: 10px;
+  font-size: 1.4rem;
+}
+main.main div.third_main_area div.shop_info div.map_card ul.opening_info > li > a.address_mobile:hover{
+  color: #325572;
+}
+@media (max-width: 991.98px){
+  main.main div.third_main_area div.shop_info div.map_card ul.opening_info > li > a.address_mobile{
+    display: block;
+  }
+}
+main.main div.third_main_area div.shop_info div.map_card ul.opening_info > li > a.address_mobile > span{
+  transform: rotate(180deg);
+  position: relative;
+  font-size: 1.6rem;
+  top: 3px;
+  right: 2px;
+}
 main.main div.third_main_area div.shop_info div.map_card a.address{
   display: block;
   text-decoration: none;
@@ -737,7 +761,7 @@ main.main div.third_main_area div.shop_info div.map_card a.address{
 }
 @media (max-width: 991.98px){
   main.main div.third_main_area div.shop_info div.map_card a.address{
-    display: inline-block;
+    display: none;
     margin: 0;
     position: absolute;
     left: calc(40% + 35px);
@@ -923,9 +947,25 @@ main.main div.third_main_area div.product_browse div.slide_to_left > button, mai
   width: 30px;
   height: 30px;
 }
+@media (max-width: 450px){
+  main.main div.third_main_area div.product_browse div.slide_to_left > button, main.main div.third_main_area div.product_browse div.slide_to_right > button{
+    width: 20px;
+    height: 20px;
+  }
+}
 main.main div.third_main_area div.product_browse div.slide_to_left > button > span, main.main div.third_main_area div.product_browse div.slide_to_right > button > span{
   font-size: 2.4rem;
-  line-height: 2.6rem;
+  line-height: 2.7rem;
+}
+@media (max-width: 450px){
+  main.main div.third_main_area div.product_browse div.slide_to_left > button > span, main.main div.third_main_area div.product_browse div.slide_to_right > button > span{
+    font-size: 2rem;
+    line-height: 1.8rem;
+  }
+    main.main div.third_main_area div.product_browse div.slide_to_left > button > span{
+      position: relative;
+      right: 1px;
+    }
 }
 main.main div.third_main_area div.product_browse div.slide_to_left > button:active, main.main div.third_main_area div.product_browse div.slide_to_right > button:active{
   background-color: #777;

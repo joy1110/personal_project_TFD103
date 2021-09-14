@@ -11,6 +11,8 @@
     <!-- 載入Google Material Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
       rel="stylesheet">
+    <!-- 載入jQuey -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   </head>
   <body>
 
@@ -76,7 +78,7 @@
           <button class="trash">
             <span class="material-icons cart">&#xe872;</span>
           </button>
-          <span class="price">$110</span>
+          <span class="price" data-price="110">$110</span>
           <div class="number">
             <button class="add">+</button>
             <span class="number">2</span>
@@ -91,13 +93,13 @@
           <button class="trash">
             <span class="material-icons cart">&#xe872;</span>
           </button>
-          <span class="price">$110</span>
+          <span class="price" data-price="120">$120</span>
           <div class="number">
             <button class="add">+</button>
             <span class="number">1</span>
             <button class="subtract">-</button>
           </div>
-          <span class="total">$110</span>
+          <span class="total">$120</span>
         </div>
 
       </div>
@@ -105,7 +107,7 @@
       <div class="count_area">
         <div class="up">
           <span class="totoal">合計：</span>
-          <span class="totoal_price">$330</span>
+          <span class="totoal_price">$340</span>
           <span class="deliver">運費：</span>
           <span class="deliver_price">$60</span>
           <span class="discount">優惠折扣：</span>
@@ -114,7 +116,7 @@
         <div class="short_hr_line"></div>
         <div class="down">
           <span class="all">總計：</span>
-          <span class="all_price">$390</span>
+          <span class="all_price">$400</span>
         </div>
         <button class="buy">
           前往結帳
@@ -141,6 +143,71 @@
     </footer>
 
     <script src="../js/common/header.js"></script>
+    <script>
+      $(document).ready(function(){
+
+        // 商品數量增減
+        document.addEventListener("click", function(e){
+
+          if(e.target.classList.contains("add")){
+            let productCount = e.target.nextElementSibling;
+            let productCountNumber = Number(productCount.innerText);
+            productCount.innerText = (++productCountNumber).toString();
+
+            let total = $(e.target).closest("div.product").find("span.total");
+            let priceSpan = $(e.target).closest("div.product").find("span.price");
+            let price = Number(priceSpan.attr("data-price"));
+            totalPrice = price * productCountNumber;
+            total.get(0).innerText = "$" + totalPrice.toString();
+          }
+
+          if(e.target.classList.contains("subtract")){
+            let productCount = e.target.previousElementSibling;
+            let productCountNumber = Number(productCount.innerText);
+            if(productCountNumber > 1){
+              productCount.innerText = (--productCountNumber).toString();
+            }
+
+            let total = $(e.target).closest("div.product").find("span.total");
+            let priceSpan = $(e.target).closest("div.product").find("span.price");
+            let price = Number(priceSpan.attr("data-price"));
+            totalPrice = price * productCountNumber;
+            total.get(0).innerText = "$" + totalPrice.toString();
+          }
+
+        });
+
+
+        //刪除商品
+        $("button.trash").on("click", function(){
+          let product = this.closest("div.product");
+          $(product).fadeOut(500);
+          setTimeout(function(){
+            product.remove();
+          }, 500);
+        });
+
+
+        //總計
+        document.addEventListener("click", function(){
+          let price = document.querySelectorAll("span.total");
+          let priceArr = [];
+          for(let i = 1; i < price.length; i++){
+            let thisPrice = price[i].innerText.replace("$", "");
+            priceArr.push(parseInt(thisPrice, 10));
+          }
+
+          let total = priceArr.reduce((accu, item) => {return accu + item}, 0);
+          $("span.totoal_price").text("$" + total.toString());
+
+          let deliverFee = parseInt($("span.deliver_price").text().replace("$", ""));
+          let discount = parseInt($("span.discount_price").text().replace("$", ""));
+          let final = total + deliverFee - discount;
+          $("span.all_price").text("$" + final.toString());
+        });
+
+      });
+    </script>
 
   </body>
 </html>

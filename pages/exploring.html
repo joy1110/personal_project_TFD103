@@ -102,10 +102,11 @@
       <div class="main_area">
         <div class="picture_area">
           <div class="main_image">
-            <img src="../images/DSC8386.jpg" alt="an old house picture">
+            <img src="../images/big/DSC8386.jpg" alt="an old house picture">
           </div>
           <div class="gallery">
-            <img src="../images/DSC8362.jpg" class="-on" alt="gallery of old house picture">
+            <img src="../images/DSC8386.jpg" class="-on" alt="gallery of old house picture">
+            <img src="../images/DSC8362.jpg" class="" alt="gallery of old house picture">
             <img src="../images/DSC8372.jpg" class="" alt="gallery of old house picture">
             <img src="../images/DSC8376.jpg" class="" alt="gallery of old house picture">
           </div>
@@ -125,11 +126,12 @@
 
       <div class="main_area">
         <div class="picture_area">
-          <div class="main_image"><img src="../images/DSC4702.jpg" alt="an old house picture"></div>
+          <div class="main_image"><img src="../images/big/DSC4702.jpg" alt="an old house picture"></div>
           <div class="gallery">
-            <img src="../images/DSC4705.jpg" alt="gallery of old house picture">
-            <img src="../images/DSC4701.jpg" alt="gallery of old house picture">
-            <img src="../images/DSC4704.jpg" alt="gallery of old house picture">
+            <img src="../images/DSC4702.jpg" class="-on" alt="gallery of old house picture">
+            <img src="../images/DSC4705.jpg" class="" alt="gallery of old house picture">
+            <img src="../images/DSC4701.jpg" class="" alt="gallery of old house picture">
+            <img src="../images/DSC4704.jpg" class="" alt="gallery of old house picture">
           </div>
         </div>
         <div class="text_area">
@@ -138,7 +140,7 @@
           </div>
           <div class="right">
             <a class="go_to" href="./intro.html">詳細介紹</a>
-            <p class="short_intro">台南地方法院為1912年所造的法院建築，被譽為日治時期三大建築之一，是全台現存最大的歷史建築，見證了許多重要案件的審判...</p>
+            <p class="short_intro">台南地方法院為1912年所造的法院建築，被譽為日治時期三大建築之一，是全台現存最大的法院歷史建築。此處見證了許多重要案件的審判，如著名的抗日事件——噍吧哖事件等，建築本體和司法歷史都極富教育意義...</p>
           </div>
         </div>
       </div>
@@ -163,16 +165,26 @@
 
     <script src="../js/common/header.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
 
     <script>
+      AOS.init();
+
       $(document).ready(function(){
         $("button.go_top").on("click", function(){
           $("html, body").animate({
             scrollTop: 0
           }, 500)
+        });
+
+
+        $("div.gallery > img").on("click", function(){
+          $(this).closest("div.gallery").find("img").removeClass("-on");
+          $(this).addClass("-on");
+
+          let bigImg = $(this).closest("div.picture_area").find("div.main_image > img");
+          let bigImgSrc = $(this).attr("src").replace("images", "images/big");
+          $(bigImg).prop("src", bigImgSrc);
+
         });
       });
     </script>
