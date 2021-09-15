@@ -272,7 +272,7 @@ main.main div.story_board div.story_card div.title_area img{
 main.main div.story_board div.story_card div.title_area h2.story_title{
   display: inline-block;
   vertical-align: top;
-  margin: 0;
+  /* margin: 0; */
   width: 210px;
   font-size: 1.8rem;
   margin-left: 8px;
