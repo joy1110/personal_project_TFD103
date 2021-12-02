@@ -11,6 +11,11 @@ div.arrow_down{
   text-align: center;
   position: relative;
   padding-top: 5px;
+
+  animation-name: arrow_down;
+  animation-duration: .5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
 div.arrow_down > span.material-icons{
   font-size: 2.6rem;
@@ -22,6 +27,12 @@ div.arrow_down > span.material-icons:last-child{
   left: 50%;
   bottom: -6px;
   transform: rotate(-90deg) translateY(-50%);
+}
+
+@keyframes arrow_down{
+  100%{
+    transform: translateY(20%);
+  }
 }
 
 
