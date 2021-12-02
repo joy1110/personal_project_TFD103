@@ -179,6 +179,9 @@ main.main div.filter form.filter button.filter:hover{
 main.main{
   max-width: 1300px;
   margin: 0 auto;
+
+  /* 彌補 header 改為 position: fixed 不能佔位的問題 */
+  margin-top: 55px;
 }
 main.main div.main_area{
   /* border: 1px solid black; */

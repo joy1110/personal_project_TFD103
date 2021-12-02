@@ -6,7 +6,10 @@ body{
 
 div.main_content{
   max-width: 1300px;
-  margin: 0 auto;;
+  margin: 0 auto;
+
+  /* 彌補 header 改為 position: fixed 不能佔位的問題 */
+  margin-top: 95px;
 }
 
 /* 側邊欄 */

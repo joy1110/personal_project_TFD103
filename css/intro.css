@@ -7,17 +7,17 @@ body{
 }
 
 /* 向下箭頭 */
-main.main div.arrow_down{
+div.arrow_down{
   text-align: center;
   position: relative;
   padding-top: 5px;
 }
-main.main div.arrow_down > span.material-icons{
+div.arrow_down > span.material-icons{
   font-size: 2.6rem;
   transform: rotate(-90deg);
   cursor: pointer;
 }
-main.main div.arrow_down > span.material-icons:last-child{
+div.arrow_down > span.material-icons:last-child{
   position: absolute;
   left: 50%;
   bottom: -6px;
@@ -26,130 +26,184 @@ main.main div.arrow_down > span.material-icons:last-child{
 
 
 /* 第一屏 */
-main.main div.first_screen{
+div.first_screen{
   /* border: 1px solid red; */
   width: 100%;
   height: calc(100vh - var(--header-height));
-  background-image: url(../images/DSC8386.jpg);
+  background-image: url(../images/big/DSC8386.jpg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
-}
-main.main div.first_screen div.first_screen_intro{
-  /* border: 1px solid blue; */
-  height: 65%;
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, .6) 35%, rgba(255, 255, 255, .2) 100%);
-  opacity: 0;
-  transition: opacity .5s;
+  position: relative;
+
   overflow: hidden;
 }
-main.main div.first_screen div.first_screen_intro:hover{
-  opacity: 1;
+/* div.first_screen div.show_more{
+  display: inline-block;
+  font-size: 2rem;
+  color: #313131;
+  background-image: radial-gradient(closest-side, rgba(246, 243, 238, .9) 70%, transparent 100%);
+  padding: 15px 40px;
+  opacity: .85;
+  vertical-align: top;
+  line-height: 5rem;
+  opacity: .8;
+  transition: opacity .5s ease;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 10;
 }
-main.main div.first_screen div.first_screen_intro h1.title1{
+div.first_screen div.show_more:hover{
+  opacity: 0;
+}
+div.first_screen div.show_more .show_more_icon{
+  font-size: 4.8rem;
+  vertical-align: top;
+  color: #212121;
+} */
+div.first_screen div.first_screen_intro{
+  /* border: 1px solid blue; */
+  height: 60%;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, .6) 70%, rgba(255, 255, 255, 0) 95%);
+  /* opacity: 0; */
+  opacity: .9;
+  transition: opacity .5s;
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+/* div.first_screen div.show_more:hover + div.first_screen_intro{
+  opacity: .9;
+} */
+div.first_screen div.first_screen_intro h1.title1{
   text-align: center;
   font-size: 3.2rem;
   font-weight: bold;
-  margin: 60px 0 30px;
-  color: #333;
+  margin: 80px 0 30px;
+  color: #212121;
 }
-main.main div.first_screen div.first_screen_intro p.intro{
+div.first_screen div.first_screen_intro p.intro{
   padding: 0 300px;
   font-size: 2rem;
   line-height: 1.6em;
-  color: #333;
+  color: #212121;
 }
 
 
 /* 主頁一 */
-main.main div.main_1{
+div.main_1{
   /* border: 1px solid blue; */
   width: var(--main-width);
   height: calc(100vh - var(--header-height));
   margin: 0 auto;
-  overflow: scroll;
+
+  overflow: hidden;
 }
-main.main div.main_1 h2.title2{
+div.main_1 h2.title2{
   text-align: center;
   font-size: 2.2rem;
-  margin: 30px 0;
+  margin: 50px 0 30px;
 }
-main.main div.main_1 p.para{
+div.main_1 p.para{
   font-size: 1.6rem;
   line-height: 2em;
-  padding: 0 20%;
+  padding: 0 5%;
   text-indent: 2em;
   margin-bottom: 25px;
 }
-main.main div.main_1 p.para2{
+div.main_1 p.para2{
   margin-bottom: 35px;
 }
-main.main div.main_1 div.pic_area{
+div.main_1 div.pic_area{
   text-align: center;
   font-size: 0;
 }
-main.main div.main_1 div.pic_area > img{
-  width: 340px;
+div.main_1 div.pic_area > img{
+  width: 27%;
 }
 
 
 /* 主頁二 */
-main.main div.main_2{
+div.main_2{
   /* border: 1px solid red; */
   width: var(--main-width);
   height: calc(100vh - var(--header-height));
   margin: 0 auto;
-  overflow: scroll;
+  /* overflow: scroll; */
   font-size: 0;
+  /* padding-top: 0px; */
+
+  overflow: hidden;
+}
+div.main_2 > div{
   padding-top: 60px;
 }
-main.main div.main_2 div.left{
+div.main_2 div.left{
   display: inline-block;
-  width: 550px;
-  height: 500px;
+  width: 40%;
+  /* height: 500px; */
   vertical-align: top;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
+  margin-left: 5%;
 }
-main.main div.main_2 div.left > img{
+div.main_2 div.left > img{
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
-main.main div.main_2 div.right{
+div.main_2 div.right{
   display: inline-block;
-  width: calc(100% - 550px);
-  padding: 0 50px;
+  width: calc(100% - 45%);
+  padding: 0 5%;
 }
-main.main div.main_2 div.right p.para{
+div.main_2 div.right p.para{
   font-size: 1.6rem;
   line-height: 2em;
-  margin: 0;
+  margin: 15px 0;
 }
-main.main div.main_2 div.arrow_down{
+div.main_2 div.right p.para:nth-child(1){
+  margin-top: 0;
+}
+div.main_2 div.arrow_down{
   font-size: 1rem;
 }
 
 
 /* 主頁三 */
-main.main div.main_3{
+div.main_3{
   /* border: 1px solid blue; */
-  width: var(--main-width);
+  width: var(--page-width);
   height: calc(100vh - var(--header-height));
   margin: 0 auto;
-  overflow: scroll;
-  padding-top: 40px;
+  /* overflow: scroll; */
+
+  overflow: hidden;
 }
-main.main div.main_3 div.up{
+div.main_3 div.up{
   text-align: center;
+  padding-top: 45px;
 }
-main.main div.main_3 div.up > img{
-  width: 1000px;
-  height: 500px;
+div.main_3 div.up > img{
+  width: 75%;
+  /* height: 500px; */
 }
-main.main div.main_3 div.down{
-  padding-top: 10px;
+div.main_3 div.down{
+  padding-top: 20px;
 }
-main.main div.main_3 div.down p.para{
+div.main_3 div.down p.para{
+  width: 75%;
+  margin: 0 auto;
   font-size: 1.6rem;
   line-height: 2em;
-  padding: 0 100px;
+  /* padding: 0 100px; */
+}
+
+footer.footer{
+  height: 160px !important;
+}
+footer.footer > div{
+  height: 160px !important;
 }

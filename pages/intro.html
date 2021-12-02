@@ -15,6 +15,10 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- 載入jQuey -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/vendors/scrolloverflow.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.min.js"></script>
   </head>
   <body>
 
@@ -51,22 +55,27 @@
       </div>
     </header>
 
-    <main class="main">
+    <div id="fullpage">
+
+    
 
       <!-- Go to top按鈕 -->
-      <div class="GTT_button" data-aos="fade-right" data-aos-duration="1000" data-aos-anchor=".main_1" data-aos-offset="600">
+      <div class="GTT_button" data-aos="fade-left" data-aos-duration="1000" data-aos-anchor=".main_1" data-aos-offset="600">
         <button class="go_top"><span class="material-icons cart">&#xe316;</span></button>
         <span>Go to Top</span>
       </div>
 
-      <div class="first_screen">
-        <div class="first_screen_intro">
-          <h1 class="title1">錫鼓</h1>
-          <p class="intro">開山路小巷弄內的老屋咖啡廳，老屋改造能手林文濱的最新作品。<br>營業時間：10:00~17:30。<br>週三為公休日。</p>
-        </div>
+      <div class="first_screen section active">
+        <!-- <div class="show_more">
+          <span class="material-icons show_more_icon">&#xe0e0;</span>&nbsp;查看更多資訊
+        </div> -->
+          <div class="first_screen_intro">
+            <h1 class="title1">錫鼓</h1>
+            <p class="intro">開山路小巷弄內的老屋咖啡廳，老屋改造能手林文濱的最新作品。<br>營業時間：10:00~17:30。<br>週三為公休日。</p>
+          </div>
       </div>
 
-      <div class="main_1">
+      <div class="main_1 section">
         <h2 class="title2">延續「順風號」的精神，「錫鼓」的繼承與蛻變</h2>
         <p class="para para1">繼創造出KINKS、破屋、蘿拉冷飲店等優秀的老屋新生作品後，擅長保留老屋原始韻味，再融入自身品味進行裝潢的老闆林文濱，這次又帶來了另一處靜謐又迷人的老屋場所——錫鼓。先前文濱老闆的著名老屋咖啡廳順風號，因故無法在同一地點繼續營業，而順風號的價值與精神就來自該棟老屋——早期順風牌電扇老闆的起家厝，也因此等於間接宣告了順風號的消失，令眾多喜愛老屋的粉絲扼腕不已。</p>
         <p class="para para2">所幸，文濱老闆旋即也宣佈即將開一間新店，彌補順風號的缺位，那便是錫鼓的誕生。錫鼓的位置就在原順風號店址的斜對角，同樣也是老屋改建，而順風號廣受歡迎的飲品、鬆餅等餐點也都能在錫鼓找到，讓懷念順風號的粉絲們得以好好回味。許多過往放在順風號的老物裝飾品，都被移至錫鼓店內擺放，熟客們不妨可以多留意身旁，看看能否發現順風號也曾用過的裝飾物。至於超人氣的牛頭梗店狗Hinoki呢？當然也被帶到錫鼓囉，瞧牠適應環境挺快的，已經自在地在庭院內溜達了。</p>
@@ -81,7 +90,7 @@
         </div>
       </div>
 
-      <div class="main_2">
+      <div class="main_2 section">
         <div class="left">
           <img class="img1" src="../images/DSC8388.jpg">
         </div>
@@ -95,7 +104,7 @@
         </div>
       </div>
 
-      <div class="main_3">
+      <div class="main_3 section">
         <div class="up">
           <img class="img1" src="../images/DSC8357.jpg">
         </div>
@@ -104,9 +113,9 @@
         </div>
       </div>
 
-    </main>
+    
 
-    <footer class="footer">
+    <footer class="footer section">
       <div class="page_link">
         <ul class="page_link">
           <li><a href="./exploring.html">老屋探索</a></li>
@@ -122,6 +131,8 @@
       </div>
     </footer>
 
+    </div>
+
     <script src="../js/common/header.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
@@ -135,6 +146,13 @@
             scrollTop: 0
           }, 500)
         });
+
+
+        $('#fullpage').fullpage({
+          scrollingSpeed: 800,
+          // scrollOverflow: true,
+        });
+
 
         // let b = 0;
         // let vh = $(window).height();

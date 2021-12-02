@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function(){
     navSwitch.previousElementSibling.classList.toggle("-hidden");
   });
   window.addEventListener("resize", function(){
-    console.log(window.innerWidth);
+    // console.log(window.innerWidth);
     if(window.innerWidth > 575.98){
       navSwitch.firstElementChild.classList.remove("-on");
       navSwitch.previousElementSibling.classList.add("-hidden");

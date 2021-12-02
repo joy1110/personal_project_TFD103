@@ -15,6 +15,9 @@ div.banner_area{
   /* border: 1px solid green; */
   position: relative;
   margin-bottom: 125px;
+
+  /* 彌補 header 改為 position: fixed 不能佔位的問題 */
+  margin-top: 55px;
 }
 div.banner_area div.banner{
   /* border: 1px solid blue; */
@@ -28,13 +31,17 @@ div.banner_area div.banner{
 div.banner_area span.decoration_text{
   /* border: 1px solid red; */
   display: inline-block;
-  width: 300px;
+  width: 370px;
   font-size: 1.6rem;
   line-height: 1.5em;
   color: #222;
   position: absolute;
-  right: 80px;
-  transform: translateY(-25%);
+  right: 15px;
+  bottom: 30px;
+  transform: translateY(10%);
+  background-image: radial-gradient(closest-side, rgba(255, 255, 255, .7) 65%, transparent 100%);
+  padding: 30px 80px;
+  border-radius: 10px;
 }
 @media (min-width: 1300px){
   div.banner_area span.decoration_text{

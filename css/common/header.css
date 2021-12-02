@@ -3,14 +3,14 @@ header.header{
   width: var(--page-width);
   margin: 0 auto;
   background-color: var(--primary-color, #F6F3EE);
-  position: sticky;
+  position: fixed;
   top: 0px;
   z-index: 10;
   transition: all .6s;
   box-shadow: 0 1px 10px rgba(0, 0, 0, .2);
   height: 55px;
   min-width: 320px;
-  /* padding-bottom: 5px; */
+  /* padding-bottom: 5px; */;
 }
 header.header.hideout{
   transform: translateY(-100%);

@@ -7,6 +7,9 @@ main.main{
   text-align: right;
   max-width: 1300px;
   margin: 0 auto;
+
+  /* 彌補 header 改為 position: fixed 不能佔位的問題 */
+  margin-top: 80px;
 }
 main.main h1.title1{
   font-size: 3rem;

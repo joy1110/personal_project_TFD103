@@ -114,7 +114,7 @@
       <main class="main">
 
         <!-- Go to top按鈕 -->
-        <div class="GTT_button" data-aos="fade-right" data-aos-duration="1000" data-aos-anchor=".title" data-aos-offset="500">
+        <div class="GTT_button" data-aos="fade-left" data-aos-duration="1000" data-aos-anchor=".title" data-aos-offset="500">
           <button class="go_top"><span class="material-icons cart">&#xe316;</span></button>
           <span>Go to Top</span>
         </div>
@@ -156,9 +156,9 @@
             </div>
             <div class="price">$200</div>
             <div class="number">
-              <button class="add">+</button>
-              <span class="number">1</span>
               <button class="subtract">-</button>
+              <span class="number">1</span>
+              <button class="add">+</button>
             </div>
             <button class="add_to_cart">
               <span class="material-icons cart">&#xe854;</span>
@@ -205,9 +205,9 @@
             </div>
             <div class="price">$100</div>
             <div class="number">
-              <button class="add">+</button>
-              <span class="number">1</span>
               <button class="subtract">-</button>
+              <span class="number">1</span>
+              <button class="add">+</button>
             </div>
             <button class="add_to_cart">
               <span class="material-icons cart">&#xe854;</span>
@@ -284,15 +284,15 @@
 
         //商品數量增減
         $("button.add").on("click", function(){
-          let num = Number(this.nextElementSibling.innerText);
+          let num = Number(this.previousElementSibling.innerText);
           num++;
-          this.nextElementSibling.innerText = num.toString();
+          this.previousElementSibling.innerText = num.toString();
         });
         $("button.subtract").on("click", function(){
-          let num = Number(this.previousElementSibling.innerText);
+          let num = Number(this.nextElementSibling.innerText);
           if(num > 1){
             num--;
-            this.previousElementSibling.innerText = num.toString();
+            this.nextElementSibling.innerText = num.toString();
           }
         });
 
