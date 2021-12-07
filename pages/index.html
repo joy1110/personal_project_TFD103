@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- 載入jQuey -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <!-- 載入 swiper -->
+    <link rel="stylesheet" href="../vendors/swiper@7/swiper-bundle.min.css">
+    <script src="../vendors/swiper@7/swiper-bundle.min.js"></script>
   </head>
   <body>
 
@@ -164,7 +167,7 @@
           </div>
         </div>
 
-        <div class="product_browse">
+        <!-- <div class="product_browse">
           <h3 class="product_show">熱門搶先推薦</h3>
           <div class="slide_to_left"><button><span class="material-icons cart">&#xe5cb;</span></button></div>
           <div class="frame">
@@ -212,7 +215,47 @@
           </div>
           </div>
           <div class="slide_to_right"><button><span class="material-icons cart">&#xe5cc;</span></button></div>
+        </div> -->
+      
+        <div class="product_browse">
+          <h3 class="product_show">熱門搶先推薦</h3>
+          <!-- Slider main container -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <a href="./product.html"><img src="../images/index_product1.jpg" alt="picture of the product"></a>
+                <h3 class="product_title">鐵窗花畫版——富士山</h3>
+                <p class="prudoct_info">以老屋的鐵窗花圖樣作為設計靈感，使用雷射精密切割而成的...</p>
+              </div>
+              <div class="swiper-slide">
+                <a href="./product.html"><img src="../images/index_product2.jpg" alt="picture of the product"></a>
+                <h3 class="product_title">鐵窗花畫版——吉星高照</h3>
+                <p class="prudoct_info">以老屋的鐵窗花圖樣作為設計靈感，使用雷射精密切割而成的...</p>
+              </div>
+              <div class="swiper-slide">
+                <a href="./product.html"><img src="../images/index_product3.jpg" alt="picture of the product"></a>
+                <h3 class="product_title">台灣典型鐵花窗胸章</h3>
+                <p class="prudoct_info">收錄台灣各地最常見的鐵花窗樣式，拼湊成小時記憶中美好的...</p>
+              </div>
+              <div class="swiper-slide">
+                <a href="./product.html"><img src="../images/index_product4.png" alt="picture of the product"></a>
+                <h3 class="product_title">鐵窗花畫版——富士山</h3>
+                <p class="prudoct_info">以雷射精密雕刻技術，將古樸的鐵花窗式樣刻印於304不銹鋼...</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="slide_to_left"><button><span class="material-icons cart">&#xe5cb;</span></button></div>
+          <div class="slide_to_right"><button><span class="material-icons cart">&#xe5cc;</span></button></div>
+
         </div>
+      
       </div>
 
     </main>
@@ -266,6 +309,46 @@
             scrollTop: viewportHeight + 60
           }, 500)
         });
+
+
+        // 啟用 swiper
+        const swiper = new Swiper('.swiper', {
+          // Optional parameters
+          direction: 'horizontal',
+          loop: true,
+
+          // If we need pagination
+          pagination: {
+            el: '.swiper-pagination',
+          },
+
+          // Navigation arrows
+          navigation: {
+            nextEl: '.slide_to_right',
+            prevEl: '.slide_to_left',
+          },
+
+          
+          breakpoints: {
+            1199.98: {
+              slidesPerView: 4,
+              spaceBetween: 36,
+            },
+            991.98: {
+              slidesPerView: 3,
+              spaceBetween: 36,
+            },
+            767.98: {
+              slidesPerView: 2,
+              spaceBetween: 36,
+            },
+            300: {
+              slidesPerView: 1,
+              spaceBetween: 36,
+            }
+          }
+        });
+
 
       });
     </script>

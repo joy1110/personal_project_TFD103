@@ -970,3 +970,170 @@ main.main div.third_main_area div.product_browse div.slide_to_left > button > sp
 main.main div.third_main_area div.product_browse div.slide_to_left > button:active, main.main div.third_main_area div.product_browse div.slide_to_right > button:active{
   background-color: #777;
 }
+
+
+
+
+
+/* swiper 的樣式 */
+main.main div.third_main_area div.product_browse{
+  /* border: 1px solid green; */
+  text-align: center;
+  position: relative;
+
+  /* display: none; */
+}
+main.main div.third_main_area div.product_browse h3.product_show{
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 10px 0 25px;
+}
+
+main.main div.third_main_area div.product_browse div.swiper{
+  /* border: 1px solid black; */
+  width: 1024px;
+  padding: 0 5px 5px 0;
+}
+@media (max-width: 1199.98px){
+  main.main div.third_main_area div.product_browse div.swiper{
+    width: 768px;
+  }
+}
+@media (max-width: 991.98px){
+  main.main div.third_main_area div.product_browse div.swiper{
+    width: 512px;
+  }
+}
+@media (max-width: 767.98px){
+  main.main div.third_main_area div.product_browse div.swiper{
+    width: 256px;
+  }
+}
+main.main div.third_main_area div.product_browse div.swiper div.swiper-slide{
+  /* border: 1px solid red; */
+  padding: 20px 10px;
+  text-align: center;
+  box-shadow: 1px 2px 3px #999;
+  background-color: var(--secondary-color-1);
+  height: 320px;
+}
+main.main div.third_main_area div.product_browse div.swiper div.swiper-slide > a{
+  display: inline-block;
+  width: 200px;
+}
+main.main div.third_main_area div.product_browse div.swiper div.swiper-slide > a > img{
+  transition: all 0.3s;
+  width: 100%
+}
+main.main div.third_main_area div.product_browse div.swiper div.swiper-slide > a:hover > img {
+  transform: scale(1.05);
+}
+main.main div.third_main_area div.product_browse div.swiper div.swiper-slide h3.product_title{
+  margin: 10px 0 10px;
+  text-align: left;
+  font-size: 1.6rem;
+}
+main.main div.third_main_area div.product_browse div.swiper div.swiper-slide p.prudoct_info{
+  margin: 0;
+  text-align: left;
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+  line-height: 1.4em;
+}
+@media (max-width: 991.98px) and (min-width: 768px){
+  main.main div.third_main_area div.product_browse div.swiper div.swiper-slide p.prudoct_info{
+    margin-bottom: 0px;
+  }
+}
+@media (max-width: 767.98px) and (min-width: 576px){
+  main.main div.third_main_area div.product_browse div.swiper div.swiper-slide p.prudoct_info{
+    margin-bottom: 0px;
+  }
+}
+main.main div.third_main_area div.product_browse div.slide_to_left{
+  /* border: 1px solid green; */
+  display: inline-block;
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  left: calc((100% - 1100px) / 2);
+  vertical-align: top;
+  z-index: 100;
+}
+main.main div.third_main_area div.product_browse div.slide_to_right{
+  /* border: 1px solid green; */
+  display: inline-block;
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  right: calc((100% - 1100px) / 2);
+  vertical-align: top;
+  z-index: 100;
+}
+@media (max-width: 1199.98px) and (min-width: 992px){
+  main.main div.third_main_area div.product_browse div.slide_to_right{
+    right: calc((100% - 845px) / 2);
+  }
+  main.main div.third_main_area div.product_browse div.slide_to_left{
+    left: calc((100% - 845px) / 2);
+  }
+}
+@media (max-width: 991.98px) and (min-width: 768px){
+  main.main div.third_main_area div.product_browse div.slide_to_right{
+    right: calc((100% - 600px) / 2);
+  }
+  main.main div.third_main_area div.product_browse div.slide_to_left{
+    left: calc((100% - 600px) / 2);
+  }
+}
+@media (max-width: 767.98px){
+  main.main div.third_main_area div.product_browse div.slide_to_right{
+    right: calc((100% - 400px) / 2);
+  }
+  main.main div.third_main_area div.product_browse div.slide_to_left{
+    left: calc((100% - 400px) / 2);
+  }
+}
+@media (max-width: 450px){
+  main.main div.third_main_area div.product_browse div.slide_to_right{
+    right: calc((100% - 290px) / 2);
+    opacity: .6;
+  }
+  main.main div.third_main_area div.product_browse div.slide_to_left{
+    left: calc((100% - 300px) / 2);
+    opacity: .6;
+  }
+}
+main.main div.third_main_area div.product_browse div.slide_to_left > button, main.main div.third_main_area div.product_browse div.slide_to_right > button{
+  border-radius: 50%;
+  border: 1px solid #aaa;
+  background-color: var(--secondary-color-1);
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+}
+/* @media (max-width: 450px){
+  main.main div.third_main_area div.product_browse div.slide_to_left > button, main.main div.third_main_area div.product_browse div.slide_to_right > button{
+    width: 20px;
+    height: 20px;
+  }
+} */
+main.main div.third_main_area div.product_browse div.slide_to_left > button > span, main.main div.third_main_area div.product_browse div.slide_to_right > button > span{
+  font-size: 2.4rem;
+  line-height: 2.7rem;
+}
+/* @media (max-width: 450px){
+  main.main div.third_main_area div.product_browse div.slide_to_left > button > span, main.main div.third_main_area div.product_browse div.slide_to_right > button > span{
+    font-size: 2rem;
+    line-height: 1.8rem;
+  }
+    main.main div.third_main_area div.product_browse div.slide_to_left > button > span{
+      position: relative;
+      right: 1px;
+    }
+} */
+main.main div.third_main_area div.product_browse div.slide_to_left > button:active, main.main div.third_main_area div.product_browse div.slide_to_right > button:active{
+  background-color: #777;
+}
